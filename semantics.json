@@ -1,0 +1,54 @@
+[
+  {
+    "name": "panels",
+    "type": "list",
+    "label": "Panels",
+    "description": "List of panels",
+    "entity": "panel",
+    "max": 100,
+    "min": 1,
+    "field": {
+      "name": "content",
+      "type": "group",
+      "label": "Content",
+      "entity": "content",
+      "fields": [
+        {
+          "name": "title",
+          "type": "text",
+          "label": "Title"
+        },
+        {
+          "name": "content",
+          "type": "library",
+          "label": "Content",
+          "entity": "content",
+          "options": [
+            "H5P.AdvancedText 1.0"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "hTag",
+    "type": "select",
+    "label": "H tags for labels",
+    "description": "The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels.",
+    "options": [
+      {
+        "value": "h2",
+        "label": "H2"
+      },
+      {
+        "value": "h3",
+        "label": "H3"
+      },
+      {
+        "value": "h4",
+        "label": "H4"
+      }
+    ],
+    "default": "h2"
+  }
+]

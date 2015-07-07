@@ -1,0 +1,29 @@
+{
+  "title": "Accordion",
+  "contentType": "accordion",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 0,
+  "embedTypes": [
+    "iframe"
+  ],
+  "runnable": 1,
+  "fullscreen": 0,
+  "machineName": "H5P.Accordion",
+  "author": "Joubel AS",
+  "coreApi": {
+    "majorVersion": 1,
+    "minorVersion": 5
+  },
+  "license": "MIT",
+  "preloadedJs": [
+    {
+      "path": "h5p-accordion.js"
+    }
+  ],
+  "preloadedCss": [
+    {
+      "path": "h5p-accordion.css"
+    }
+  ]
+}

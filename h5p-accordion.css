@@ -1,0 +1,66 @@
+.h5p-panel-content {
+  display: none;
+}
+
+.h5p-panel-title {
+  margin: 0;
+  padding-left: 2em;
+}
+
+.h5p-panel-title a {
+  border-bottom: none;
+  color: #111111;
+  display: block;
+  padding: 0.8em 0;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease 0s;
+  -moz-transition: color 200ms ease 0s;
+  transition: color 200ms ease 0s;
+  width: 100%;
+}
+.h5p-panel-title {
+  font-size: 1.2em;
+}
+
+.h5p-expand-icon {
+  color: #777777;
+  -webkit-transition: all 200ms ease 0s;
+  -moz-transition: all 200ms ease 0s;
+  transition: all 200ms ease 0s;
+  position: absolute;
+  left: -1.2em;
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.h5p-panel-title a:hover,
+.h5p-panel-title a:focus {
+  color: #222266;
+}
+
+.h5p-panel-title:hover .h5p-expand-icon,
+.h5p-panel-title:focus .h5p-expand-icon {
+  color: #222266;
+}
+
+.h5p-panel-expanded {
+  color: #000000;
+}
+
+.h5p-panel-expanded .h5p-expand-icon {
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+
+.h5p-accordion {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.h5p-panel-title {
+  border-top: 1px solid #eeeeee;
+}
+
+.h5p-panel-content {
+  padding: 0 0.8em 0.2em;
+}
