@@ -24,14 +24,16 @@
 }
 
 .h5p-expand-icon {
-  color: #777777;
+  font-family: 'H5PFontAwesome4';
   -webkit-transition: all 200ms ease 0s;
   -moz-transition: all 200ms ease 0s;
   transition: all 200ms ease 0s;
   position: absolute;
   left: -1.2em;
-  -webkit-transform: rotate(270deg);
-  transform: rotate(270deg);
+}
+
+.h5p-expand-icon::after {
+    content: "\f105";
 }
 
 .h5p-panel-title a:hover,
@@ -49,18 +51,30 @@
 }
 
 .h5p-panel-expanded .h5p-expand-icon {
-  -webkit-transform: rotate(315deg);
-  transform: rotate(315deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .h5p-accordion {
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: none;
 }
 
 .h5p-panel-title {
   border-top: 1px solid #eeeeee;
 }
 
+.h5p-panel-title:first-child {
+  border-top: none;
+}
+
 .h5p-panel-content {
-  padding: 0 0.8em 0.2em;
+  padding: 0 0.8em 0.2em 2.4em;
+}
+
+.h5p-panel-content p {
+  margin-top: 0;
+}
+
+.h5p-panel-content:last-child {
+  border-bottom: 1px solid #eeeeee;
 }

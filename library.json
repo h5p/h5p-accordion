@@ -21,6 +21,13 @@
       "path": "h5p-accordion.js"
     }
   ],
+  "preloadedDependencies": [
+    {
+      "machineName": "FontAwesome",
+      "majorVersion": 4,
+      "minorVersion": 1
+    }
+  ],
   "preloadedCss": [
     {
       "path": "h5p-accordion.css"

@@ -29,16 +29,16 @@ H5P.Accordion = (function ($) {
     }, params);
 
     this.contentData = contentData;
-    
+
     this.instances = [];
 
     for (var i = 0; i < this.params.panels.length; i++) {
       this.instances[i] = H5P.newRunnable(this.params.panels[i].content, contentId);
     }
-    
+
     this.idPrefix = H5P.statics.Accordion.nextIdPrefix++ + '-';
   }
-  
+
   Accordion.prototype = Object.create(H5P.EventDispatcher.prototype);
   Accordion.prototype.constructor = Accordion;
 
@@ -50,20 +50,20 @@ H5P.Accordion = (function ($) {
   Accordion.prototype.attach = function ($container) {
     $($container).addClass('h5p-accordion-holder');
     var self = this;
-    
+
     var $accordion = $('<div>', {
       'class': 'h5p-accordion',
       'role': 'tablist',
       'multiselectable': true
     }).appendTo($container);
-    
+
     for (var i = 0; i < this.params.panels.length; i++) {
       var targetId = 'h5p-panel-content-' + this.idPrefix + i;
-      
+
       var $h =  $('<' + this.params.hTag + '>', {
         'class': 'h5p-panel-title'
       }).appendTo($accordion);
-      
+
       var $a = $('<a>', {
         'href': '#' + targetId,
         'aria-expanded': false,
@@ -74,7 +74,7 @@ H5P.Accordion = (function ($) {
       .click(function() {
         var $clicked = $(this);
         var $clickedPanel = $clicked.parent().next(".h5p-panel-content");
-        
+
         if (self.$expandedTitle === undefined || !self.$expandedTitle.is($clicked)) {
           // Start by collapsing any already expanded panel
           if (self.$expandedTitle !== undefined) {
@@ -91,7 +91,7 @@ H5P.Accordion = (function ($) {
               })
               .attr('aria-hidden', 'true');
           }
-          
+
           // Expand the clicked panel
           $clicked.attr('aria-expanded', true)
             .addClass('h5p-panel-expanded');
@@ -124,13 +124,12 @@ H5P.Accordion = (function ($) {
       })
       // Append the link to the panel title
       .appendTo($h);
-      
+
       // Add an icon to the link
       var $icon = $('<span>', {
-        'class': 'h5p-expand-icon',
-        'text': 'v'
+        'class': 'h5p-expand-icon'
       }).prependTo($a);
-      
+
       // Add the content section below the title
       var $content = $('<div>', {
         'class': 'h5p-panel-content',
@@ -139,12 +138,12 @@ H5P.Accordion = (function ($) {
         'aria-hidden': true,
         'role': 'tabpanel'
       }).appendTo($accordion);
-      
+
       // Add the content itself to the content section
       this.instances[i].attach($content);
     }
   };
-  
+
   /**
    * Makes sure that the heigt of the iframe gets animated
    */
@@ -155,6 +154,6 @@ H5P.Accordion = (function ($) {
       self.trigger('resize');
     }, 40);
   };
-  
+
   return Accordion;
 })(H5P.jQuery);
