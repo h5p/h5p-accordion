@@ -69,7 +69,7 @@ H5P.Accordion = (function ($) {
         'aria-expanded': false,
         'aria-controls': targetId,
         'id': 'h5p-panel-link-' + this.idPrefix + i, // TODO: Make IDs unique by adding static counter somewhere?
-        'text': this.params.panels[i].title
+        'html': this.params.panels[i].title
       })
       .click(function() {
         var $clicked = $(this);

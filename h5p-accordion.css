@@ -5,6 +5,15 @@
 .h5p-panel-title {
   margin: 0;
   padding-left: 2em;
+  padding-right: 1px;
+}
+
+.h5p-panel-title:first-of-type {
+  padding-top: 1px;
+}
+
+.h5p-panel-title:last-of-type {
+  padding-bottom: 1px;
 }
 
 .h5p-panel-title a {
