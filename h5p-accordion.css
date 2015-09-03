@@ -1,22 +1,22 @@
-.h5p-panel-content {
+.h5p-accordion .h5p-panel-content {
   display: none;
 }
 
-.h5p-panel-title {
+.h5p-accordion .h5p-panel-title {
   margin: 0;
   padding-left: 2em;
   padding-right: 1px;
 }
 
-.h5p-panel-title:first-of-type {
+.h5p-accordion .h5p-panel-title:first-of-type {
   padding-top: 1px;
 }
 
-.h5p-panel-title:last-of-type {
+.h5p-accordion .h5p-panel-title:last-of-type {
   padding-bottom: 1px;
 }
 
-.h5p-panel-title a {
+.h5p-accordion .h5p-panel-title a {
   border-bottom: none;
   color: #111111;
   display: block;
@@ -28,11 +28,11 @@
   transition: color 200ms ease 0s;
   width: 100%;
 }
-.h5p-panel-title {
+.h5p-accordion .h5p-panel-title {
   font-size: 1.2em;
 }
 
-.h5p-expand-icon {
+.h5p-accordion .h5p-expand-icon {
   font-family: 'H5PFontAwesome4';
   -webkit-transition: all 200ms ease 0s;
   -moz-transition: all 200ms ease 0s;
@@ -41,25 +41,25 @@
   left: -1.2em;
 }
 
-.h5p-expand-icon::after {
+.h5p-accordion .h5p-expand-icon::after {
     content: "\f105";
 }
 
-.h5p-panel-title a:hover,
-.h5p-panel-title a:focus {
+.h5p-accordion .h5p-panel-title a:hover,
+.h5p-accordion .h5p-panel-title a:focus {
   color: #222266;
 }
 
-.h5p-panel-title:hover .h5p-expand-icon,
-.h5p-panel-title:focus .h5p-expand-icon {
+.h5p-accordion .h5p-panel-title:hover .h5p-expand-icon,
+.h5p-accordion .h5p-panel-title:focus .h5p-expand-icon {
   color: #222266;
 }
 
-.h5p-panel-expanded {
+.h5p-accordion .h5p-panel-expanded {
   color: #000000;
 }
 
-.h5p-panel-expanded .h5p-expand-icon {
+.h5p-accordion .h5p-panel-expanded .h5p-expand-icon {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
@@ -68,22 +68,22 @@
   border-bottom: none;
 }
 
-.h5p-panel-title {
+.h5p-accordion .h5p-panel-title {
   border-top: 1px solid #eeeeee;
 }
 
-.h5p-panel-title:first-child {
+.h5p-accordion .h5p-panel-title:first-child {
   border-top: none;
 }
 
-.h5p-panel-content {
+.h5p-accordion .h5p-panel-content {
   padding: 0 0.8em 0.2em 2.4em;
 }
 
-.h5p-panel-content p {
+.h5p-accordion .h5p-panel-content p {
   margin-top: 0;
 }
 
-.h5p-panel-content:last-child {
+.h5p-accordion .h5p-panel-content:last-child {
   border-bottom: 1px solid #eeeeee;
 }

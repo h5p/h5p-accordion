@@ -1,22 +1,19 @@
-var H5P = H5P || {};
-H5P.statics = H5P.statics || {};
-H5P.statics.Accordion = {
-  nextIdPrefix: 0
-};
-
 /**
  * Accordion module
  *
  * @param {jQuery} $
  */
 H5P.Accordion = (function ($) {
+  
+  var nextIdPrefix = 0;
   /**
-   * Initialize module.
+   * Initialize a new Accordion
+   * 
+   * @class H5P.InteractiveVideo
+   * @extends H5P.EventDispatcher
    * @param {Object} params Behavior settings
    * @param {Number} contentId Content identification
    * @param {Object} contentData Object containing task specific content data
-   *
-   * @returns {Object} Accordion instance
    */
   function Accordion(params, contentId, contentData) {
     this.contentId = contentId;
@@ -36,7 +33,7 @@ H5P.Accordion = (function ($) {
       this.instances[i] = H5P.newRunnable(this.params.panels[i].content, contentId);
     }
 
-    this.idPrefix = H5P.statics.Accordion.nextIdPrefix++ + '-';
+    this.idPrefix = (nextIdPrefix++) + '-';
   }
 
   Accordion.prototype = Object.create(H5P.EventDispatcher.prototype);
@@ -48,30 +45,32 @@ H5P.Accordion = (function ($) {
    * @param {jQuery} container the jQuery object which this module will attach itself to.
    */
   Accordion.prototype.attach = function ($container) {
-    $($container).addClass('h5p-accordion-holder');
+    $($container)
+      .html('')
+      .addClass('h5p-accordion')
+      .attr({
+        'class': 'h5p-accordion',
+        'role': 'tablist',
+        'multiselectable': true
+      });
+      
     var self = this;
-
-    var $accordion = $('<div>', {
-      'class': 'h5p-accordion',
-      'role': 'tablist',
-      'multiselectable': true
-    }).appendTo($container);
 
     for (var i = 0; i < this.params.panels.length; i++) {
       var targetId = 'h5p-panel-content-' + this.idPrefix + i;
 
       var $h =  $('<' + this.params.hTag + '>', {
         'class': 'h5p-panel-title'
-      }).appendTo($accordion);
+      }).appendTo($container);
 
       var $a = $('<a>', {
         'href': '#' + targetId,
         'aria-expanded': false,
         'aria-controls': targetId,
-        'id': 'h5p-panel-link-' + this.idPrefix + i, // TODO: Make IDs unique by adding static counter somewhere?
+        'id': 'h5p-panel-link-' + this.idPrefix + i,
         'html': this.params.panels[i].title
       })
-      .click(function() {
+      .click(function () {
         var $clicked = $(this);
         var $clickedPanel = $clicked.parent().next(".h5p-panel-content");
 
@@ -85,11 +84,11 @@ H5P.Accordion = (function ($) {
           if (self.$expandedPanel !== undefined) {
             self.$expandedPanel
               .stop(false, true)
-              .slideUp(200, function() {
+              .slideUp(200, function () {
                 clearInterval(self.resizing);
                 self.trigger('resize');
               })
-              .attr('aria-hidden', 'true');
+              .attr('aria-hidden', true);
           }
 
           // Expand the clicked panel
@@ -97,11 +96,11 @@ H5P.Accordion = (function ($) {
             .addClass('h5p-panel-expanded');
           $clickedPanel
             .stop(false, true)
-            .slideDown(200, function() {
+            .slideDown(200, function () {
               clearInterval(self.resizing);
               self.trigger('resize');
             })
-            .attr('aria-hidden', 'false');
+            .attr('aria-hidden', false);
           self.$expandedTitle = $clicked;
           self.$expandedPanel = $clickedPanel;
         }
@@ -111,11 +110,11 @@ H5P.Accordion = (function ($) {
             .removeClass('h5p-panel-expanded');
           $clickedPanel
             .stop(false, true)
-            .slideUp(200, function() {
+            .slideUp(200, function () {
               clearInterval(self.resizing);
               self.trigger('resize');
             })
-            .attr('aria-hidden', 'true');
+            .attr('aria-hidden', true);
            self.$expandedTitle = self.$expandedPanel = undefined;
         }
         // We're running in an iframe, so we must animate the iframe height
@@ -137,7 +136,7 @@ H5P.Accordion = (function ($) {
         'id': targetId,
         'aria-hidden': true,
         'role': 'tabpanel'
-      }).appendTo($accordion);
+      }).appendTo($container);
 
       // Add the content itself to the content section
       this.instances[i].attach($content);
@@ -147,10 +146,10 @@ H5P.Accordion = (function ($) {
   /**
    * Makes sure that the heigt of the iframe gets animated
    */
-  Accordion.prototype.animateResize = function() {
+  Accordion.prototype.animateResize = function () {
     var self = this;
     clearInterval(this.resizing);
-    this.resizing = setInterval(function() {
+    this.resizing = setInterval(function () {
       self.trigger('resize');
     }, 40);
   };
