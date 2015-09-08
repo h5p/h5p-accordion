@@ -41,7 +41,6 @@ H5P.Accordion = (function ($) {
 
   /**
    * Append field to wrapper.
-   * @public
    * @param {jQuery} container the jQuery object which this module will attach itself to.
    */
   Accordion.prototype.attach = function ($container) {
@@ -75,47 +74,11 @@ H5P.Accordion = (function ($) {
         var $clickedPanel = $clicked.parent().next(".h5p-panel-content");
 
         if (self.$expandedTitle === undefined || !self.$expandedTitle.is($clicked)) {
-          // Start by collapsing any already expanded panel
-          if (self.$expandedTitle !== undefined) {
-            self.$expandedTitle
-              .attr('aria-expanded', false )
-              .removeClass('h5p-panel-expanded');
-          }
-          if (self.$expandedPanel !== undefined) {
-            self.$expandedPanel
-              .stop(false, true)
-              .slideUp(200, function () {
-                clearInterval(self.resizing);
-                self.trigger('resize');
-              })
-              .attr('aria-hidden', true);
-          }
-
-          // Expand the clicked panel
-          $clicked.attr('aria-expanded', true)
-            .addClass('h5p-panel-expanded');
-          $clickedPanel
-            .stop(false, true)
-            .slideDown(200, function () {
-              clearInterval(self.resizing);
-              self.trigger('resize');
-            })
-            .attr('aria-hidden', false);
-          self.$expandedTitle = $clicked;
-          self.$expandedPanel = $clickedPanel;
+          self.collapseExpandedPanels();
+          self.expandPanel($clicked, $clickedPanel);
         }
         else {
-          // We clicked an already expanded panel, collaps it
-          $clicked.attr('aria-expanded', false)
-            .removeClass('h5p-panel-expanded');
-          $clickedPanel
-            .stop(false, true)
-            .slideUp(200, function () {
-              clearInterval(self.resizing);
-              self.trigger('resize');
-            })
-            .attr('aria-hidden', true);
-           self.$expandedTitle = self.$expandedPanel = undefined;
+          self.collapsePanel($clicked, $clickedPanel);
         }
         // We're running in an iframe, so we must animate the iframe height
         self.animateResize();
@@ -142,6 +105,68 @@ H5P.Accordion = (function ($) {
       this.instances[i].attach($content);
     }
   };
+  
+  /**
+   * Collapse all expanded panels
+   */
+  Accordion.prototype.collapseExpandedPanels = function () {
+    var self = this;
+    if (this.$expandedTitle !== undefined) {
+      this.$expandedTitle
+        .attr('aria-expanded', false )
+        .removeClass('h5p-panel-expanded');
+    }
+    if (this.$expandedPanel !== undefined) {
+      this.$expandedPanel
+        .stop(false, true)
+        .slideUp(200, function () {
+          clearInterval(self.resizing);
+          self.trigger('resize');
+        })
+        .attr('aria-hidden', true);
+    }
+  };
+  
+  /**
+   * Expand a panel
+   * 
+   * @param {jQuery} $title The title of the panel that is to be expanded
+   * @param {jQuery} $panel The panel that is to be expanded
+   */
+  Accordion.prototype.expandPanel = function($title, $panel) {
+    var self = this;
+    $title.attr('aria-expanded', true)
+      .addClass('h5p-panel-expanded');
+    $panel
+      .stop(false, true)
+      .slideDown(200, function () {
+        clearInterval(self.resizing);
+        self.trigger('resize');
+      })
+      .attr('aria-hidden', false);
+    self.$expandedTitle = $title;
+    self.$expandedPanel = $panel;
+  };
+  
+  /**
+   * Collapse a panel
+   * 
+   * @param {jQuery} $title The title of the panel that is to be collapsed
+   * @param {jQuery} $panel The panel that is to be collapsed
+   */
+  Accordion.prototype.collapsePanel = function($title, $panel) {
+    var self = this;
+    $title.attr('aria-expanded', false)
+      .removeClass('h5p-panel-expanded');
+    $panel
+      .stop(false, true)
+      .slideUp(200, function () {
+        clearInterval(self.resizing);
+        self.trigger('resize');
+      })
+      .attr('aria-hidden', true);
+     self.$expandedTitle = self.$expandedPanel = undefined;
+  }
 
   /**
    * Makes sure that the heigt of the iframe gets animated
