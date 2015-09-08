@@ -6,6 +6,8 @@
 H5P.Accordion = (function ($) {
   
   var nextIdPrefix = 0;
+  var nextLooperId = 0;
+  var allowedLoopers = [];
   /**
    * Initialize a new Accordion
    * 
@@ -120,7 +122,7 @@ H5P.Accordion = (function ($) {
       this.$expandedPanel
         .stop(false, true)
         .slideUp(200, function () {
-          clearInterval(self.resizing);
+          self.stopWorkLoop(self.resizing);
           self.trigger('resize');
         })
         .attr('aria-hidden', true);
@@ -140,7 +142,7 @@ H5P.Accordion = (function ($) {
     $panel
       .stop(false, true)
       .slideDown(200, function () {
-        clearInterval(self.resizing);
+        self.stopWorkLoop(self.resizing);
         self.trigger('resize');
       })
       .attr('aria-hidden', false);
@@ -161,22 +163,54 @@ H5P.Accordion = (function ($) {
     $panel
       .stop(false, true)
       .slideUp(200, function () {
-        clearInterval(self.resizing);
+        self.stopWorkLoop(self.resizing);
         self.trigger('resize');
       })
       .attr('aria-hidden', true);
      self.$expandedTitle = self.$expandedPanel = undefined;
-  }
+  };
 
   /**
    * Makes sure that the heigt of the iframe gets animated
    */
   Accordion.prototype.animateResize = function () {
     var self = this;
-    clearInterval(this.resizing);
-    this.resizing = setInterval(function () {
+    self.stopWorkLoop(this.resizing);
+    this.resizing = self.startWorkLoop(function () {
       self.trigger('resize');
     }, 40);
+  };
+  
+  Accordion.prototype.startWorkLoop = function (func, wait) {
+    var myId = nextLooperId++;
+    var self = this;
+    allowedLoopers.push(myId);
+    var looper = function(func, wait, myId) {
+      return function () { 
+        if (self.allowedToWork(myId)) {
+          try {
+            func.call(null);
+          }
+          catch (e) {
+            self.stopWorkLoop(myId);
+          }
+          setTimeout(looper, wait, func, wait, myId);
+        };
+      };
+    } (func, wait, myId);
+    setTimeout(looper, wait)
+    return myId;
+  };
+  
+  Accordion.prototype.stopWorkLoop = function (myId) {
+    var index;
+    while ((index = allowedLoopers.indexOf(myId)) !== -1) {
+      allowedLoopers.splice(index, 1);
+    }
+  };
+  
+  Accordion.prototype.allowedToWork = function (myId) {
+    return allowedLoopers.indexOf(myId) !== -1;
   };
 
   return Accordion;
