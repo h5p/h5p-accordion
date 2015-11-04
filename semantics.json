@@ -23,7 +23,7 @@
           "label": "Content type",
           "entity": "content",
           "options": [
-            "H5P.AdvancedText 1.0"
+            "H5P.AdvancedText 1.1"
           ]
         }
       ]
