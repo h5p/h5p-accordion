@@ -46,7 +46,7 @@ H5P.Accordion = (function ($) {
    * @param {jQuery} container the jQuery object which this module will attach itself to.
    */
   Accordion.prototype.attach = function ($container) {
-    this.triggerRead();
+    this.triggerConsumed();
     $($container)
       .html('')
       .addClass('h5p-accordion')
@@ -110,11 +110,11 @@ H5P.Accordion = (function ($) {
   };
   
   /**
-   * Trigger the 'read' xAPI event when this commences
+   * Trigger the 'consumed' xAPI event when this commences
    * 
    * (Will be more sophisticated in future version)
    */
-  Accordion.prototype.triggerRead = function () {
+  Accordion.prototype.triggerConsumed = function () {
     var xAPIEvent = this.createXAPIEventTemplate({
       id: 'http://activitystrea.ms/schema/1.0/consume',
       display: {
