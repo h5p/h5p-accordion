@@ -6,6 +6,8 @@
 H5P.Accordion = (function ($) {
   
   var nextIdPrefix = 0;
+  var nextLooperId = 0;
+  var allowedLoopers = [];
   /**
    * Initialize a new Accordion
    * 
@@ -41,10 +43,10 @@ H5P.Accordion = (function ($) {
 
   /**
    * Append field to wrapper.
-   * @public
    * @param {jQuery} container the jQuery object which this module will attach itself to.
    */
   Accordion.prototype.attach = function ($container) {
+    this.triggerConsumed();
     $($container)
       .html('')
       .addClass('h5p-accordion')
@@ -75,47 +77,11 @@ H5P.Accordion = (function ($) {
         var $clickedPanel = $clicked.parent().next(".h5p-panel-content");
 
         if (self.$expandedTitle === undefined || !self.$expandedTitle.is($clicked)) {
-          // Start by collapsing any already expanded panel
-          if (self.$expandedTitle !== undefined) {
-            self.$expandedTitle
-              .attr('aria-expanded', false )
-              .removeClass('h5p-panel-expanded');
-          }
-          if (self.$expandedPanel !== undefined) {
-            self.$expandedPanel
-              .stop(false, true)
-              .slideUp(200, function () {
-                clearInterval(self.resizing);
-                self.trigger('resize');
-              })
-              .attr('aria-hidden', true);
-          }
-
-          // Expand the clicked panel
-          $clicked.attr('aria-expanded', true)
-            .addClass('h5p-panel-expanded');
-          $clickedPanel
-            .stop(false, true)
-            .slideDown(200, function () {
-              clearInterval(self.resizing);
-              self.trigger('resize');
-            })
-            .attr('aria-hidden', false);
-          self.$expandedTitle = $clicked;
-          self.$expandedPanel = $clickedPanel;
+          self.collapseExpandedPanels();
+          self.expandPanel($clicked, $clickedPanel);
         }
         else {
-          // We clicked an already expanded panel, collaps it
-          $clicked.attr('aria-expanded', false)
-            .removeClass('h5p-panel-expanded');
-          $clickedPanel
-            .stop(false, true)
-            .slideUp(200, function () {
-              clearInterval(self.resizing);
-              self.trigger('resize');
-            })
-            .attr('aria-hidden', true);
-           self.$expandedTitle = self.$expandedPanel = undefined;
+          self.collapsePanel($clicked, $clickedPanel);
         }
         // We're running in an iframe, so we must animate the iframe height
         self.animateResize();
@@ -142,16 +108,129 @@ H5P.Accordion = (function ($) {
       this.instances[i].attach($content);
     }
   };
+  
+  /**
+   * Trigger the 'consumed' xAPI event when this commences
+   * 
+   * (Will be more sophisticated in future version)
+   */
+  Accordion.prototype.triggerConsumed = function () {
+    var xAPIEvent = this.createXAPIEventTemplate({
+      id: 'http://activitystrea.ms/schema/1.0/consume',
+      display: {
+        'en-US': 'consumed'
+      }
+    }, {
+      result: {
+        completion: true
+      }
+    });
+    this.trigger(xAPIEvent);
+  };
+  
+  /**
+   * Collapse all expanded panels
+   */
+  Accordion.prototype.collapseExpandedPanels = function () {
+    var self = this;
+    if (this.$expandedTitle !== undefined) {
+      this.$expandedTitle
+        .attr('aria-expanded', false )
+        .removeClass('h5p-panel-expanded');
+    }
+    if (this.$expandedPanel !== undefined) {
+      this.$expandedPanel
+        .stop(false, true)
+        .slideUp(200, function () {
+          self.stopWorkLoop(self.resizing);
+          self.trigger('resize');
+        })
+        .attr('aria-hidden', true);
+    }
+  };
+  
+  /**
+   * Expand a panel
+   * 
+   * @param {jQuery} $title The title of the panel that is to be expanded
+   * @param {jQuery} $panel The panel that is to be expanded
+   */
+  Accordion.prototype.expandPanel = function($title, $panel) {
+    var self = this;
+    $title.attr('aria-expanded', true)
+      .addClass('h5p-panel-expanded');
+    $panel
+      .stop(false, true)
+      .slideDown(200, function () {
+        self.stopWorkLoop(self.resizing);
+        self.trigger('resize');
+      })
+      .attr('aria-hidden', false);
+    self.$expandedTitle = $title;
+    self.$expandedPanel = $panel;
+  };
+  
+  /**
+   * Collapse a panel
+   * 
+   * @param {jQuery} $title The title of the panel that is to be collapsed
+   * @param {jQuery} $panel The panel that is to be collapsed
+   */
+  Accordion.prototype.collapsePanel = function($title, $panel) {
+    var self = this;
+    $title.attr('aria-expanded', false)
+      .removeClass('h5p-panel-expanded');
+    $panel
+      .stop(false, true)
+      .slideUp(200, function () {
+        self.stopWorkLoop(self.resizing);
+        self.trigger('resize');
+      })
+      .attr('aria-hidden', true);
+     self.$expandedTitle = self.$expandedPanel = undefined;
+  };
 
   /**
    * Makes sure that the heigt of the iframe gets animated
    */
   Accordion.prototype.animateResize = function () {
     var self = this;
-    clearInterval(this.resizing);
-    this.resizing = setInterval(function () {
+    self.stopWorkLoop(this.resizing);
+    this.resizing = self.startWorkLoop(function () {
       self.trigger('resize');
     }, 40);
+  };
+  
+  Accordion.prototype.startWorkLoop = function (func, wait) {
+    var myId = nextLooperId++;
+    var self = this;
+    allowedLoopers.push(myId);
+    var looper = function(func, wait, myId) {
+      return function () { 
+        if (self.allowedToWork(myId)) {
+          try {
+            func.call(null);
+          }
+          catch (e) {
+            self.stopWorkLoop(myId);
+          }
+          setTimeout(looper, wait, func, wait, myId);
+        };
+      };
+    } (func, wait, myId);
+    setTimeout(looper, wait)
+    return myId;
+  };
+  
+  Accordion.prototype.stopWorkLoop = function (myId) {
+    var index;
+    while ((index = allowedLoopers.indexOf(myId)) !== -1) {
+      allowedLoopers.splice(index, 1);
+    }
+  };
+  
+  Accordion.prototype.allowedToWork = function (myId) {
+    return allowedLoopers.indexOf(myId) !== -1;
   };
 
   return Accordion;
