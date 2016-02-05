@@ -2,7 +2,7 @@
   "title": "Accordion",
   "majorVersion": 1,
   "minorVersion": 0,
-  "patchVersion": 1,
+  "patchVersion": 2,
   "embedTypes": [
     "iframe"
   ],
@@ -24,7 +24,7 @@
     {
       "machineName": "FontAwesome",
       "majorVersion": 4,
-      "minorVersion": 3
+      "minorVersion": 5
     }
   ],
   "preloadedCss": [
