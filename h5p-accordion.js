@@ -4,13 +4,13 @@
  * @param {jQuery} $
  */
 H5P.Accordion = (function ($) {
-  
+
   var nextIdPrefix = 0;
   var nextLooperId = 0;
   var allowedLoopers = [];
   /**
    * Initialize a new Accordion
-   * 
+   *
    * @class H5P.InteractiveVideo
    * @extends H5P.EventDispatcher
    * @param {Object} params Behavior settings
@@ -52,10 +52,9 @@ H5P.Accordion = (function ($) {
       .addClass('h5p-accordion')
       .attr({
         'class': 'h5p-accordion',
-        'role': 'tablist',
-        'multiselectable': true
+        'role': 'tablist'
       });
-      
+
     var self = this;
 
     for (var i = 0; i < this.params.panels.length; i++) {
@@ -66,9 +65,10 @@ H5P.Accordion = (function ($) {
       }).appendTo($container);
 
       var $a = $('<a>', {
-        'href': '#' + targetId,
+        'href': '#',
         'aria-expanded': false,
         'aria-controls': targetId,
+        'role': 'tab',
         'id': 'h5p-panel-link-' + this.idPrefix + i,
         'html': this.params.panels[i].title
       })
@@ -101,6 +101,7 @@ H5P.Accordion = (function ($) {
         'aria-labelledby': 'h5p-panel-link-' + this.idPrefix + i,
         'id': targetId,
         'aria-hidden': true,
+        'aria-live': 'polite',
         'role': 'tabpanel'
       }).appendTo($container);
 
@@ -108,10 +109,10 @@ H5P.Accordion = (function ($) {
       this.instances[i].attach($content);
     }
   };
-  
+
   /**
    * Trigger the 'consumed' xAPI event when this commences
-   * 
+   *
    * (Will be more sophisticated in future version)
    */
   Accordion.prototype.triggerConsumed = function () {
@@ -127,7 +128,7 @@ H5P.Accordion = (function ($) {
     });
     this.trigger(xAPIEvent);
   };
-  
+
   /**
    * Collapse all expanded panels
    */
@@ -148,10 +149,10 @@ H5P.Accordion = (function ($) {
         .attr('aria-hidden', true);
     }
   };
-  
+
   /**
    * Expand a panel
-   * 
+   *
    * @param {jQuery} $title The title of the panel that is to be expanded
    * @param {jQuery} $panel The panel that is to be expanded
    */
@@ -169,10 +170,10 @@ H5P.Accordion = (function ($) {
     self.$expandedTitle = $title;
     self.$expandedPanel = $panel;
   };
-  
+
   /**
    * Collapse a panel
-   * 
+   *
    * @param {jQuery} $title The title of the panel that is to be collapsed
    * @param {jQuery} $panel The panel that is to be collapsed
    */
@@ -200,13 +201,13 @@ H5P.Accordion = (function ($) {
       self.trigger('resize');
     }, 40);
   };
-  
+
   Accordion.prototype.startWorkLoop = function (func, wait) {
     var myId = nextLooperId++;
     var self = this;
     allowedLoopers.push(myId);
     var looper = function(func, wait, myId) {
-      return function () { 
+      return function () {
         if (self.allowedToWork(myId)) {
           try {
             func.call(null);
@@ -221,14 +222,14 @@ H5P.Accordion = (function ($) {
     setTimeout(looper, wait)
     return myId;
   };
-  
+
   Accordion.prototype.stopWorkLoop = function (myId) {
     var index;
     while ((index = allowedLoopers.indexOf(myId)) !== -1) {
       allowedLoopers.splice(index, 1);
     }
   };
-  
+
   Accordion.prototype.allowedToWork = function (myId) {
     return allowedLoopers.indexOf(myId) !== -1;
   };
