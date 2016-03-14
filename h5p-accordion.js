@@ -66,7 +66,9 @@ H5P.Accordion = (function ($) {
                 .addClass('h5p-accordion')
                 .attr({
                   'role': 'tablist',
-                  'aria-multiselectable': 'true'
+                  'aria-multiselectable': 'false'
+                  // Must be changed if we ever allow more tab to be open
+                  // at the same time
                 })
     );
   };
