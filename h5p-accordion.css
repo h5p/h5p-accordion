@@ -12,6 +12,7 @@
   -moz-transition: color 200ms ease 0s;
   transition: color 200ms ease 0s;
   border-top: 1px solid #eeeeee;
+  cursor: pointer;
 }
 .h5p-accordion .h5p-panel-title:hover,
 .h5p-accordion .h5p-panel-title:focus,

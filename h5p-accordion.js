@@ -53,10 +53,11 @@ H5P.Accordion = (function ($) {
       self.triggerConsumed();
 
       // Create the content
-      self.$content = $();
+      self.elements = [];
       for (var i = 0; i < self.params.panels.length; i++) {
         self.createPanel(i);
       }
+      self.$content = $(self.elements);
     }
 
     // Insert content
@@ -164,7 +165,8 @@ H5P.Accordion = (function ($) {
     self.instances[id].attach($content);
 
     // Gather all content
-    self.$content = self.$content.add($title).add($content);
+    self.elements.push($title[0]);
+    self.elements.push($content[0]);
   };
 
   /**
