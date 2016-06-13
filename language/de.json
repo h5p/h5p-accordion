@@ -1,0 +1,36 @@
+{
+  "semantics": [
+    {
+
+      "label": "Panels",
+      "field": {
+        "label": "Inhalt",
+        "fields": [
+          {
+            "label": "Titel"
+          },
+          {
+            "label": "Inhaltstyp",
+            "options": [
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "label": "H Tags für Labels (beeinflusst die Größe des Labels nicht)",
+      "description": "Der auf den Labeln verwendete h Tag. Normalerweise H2, aber wenn dies unter ein H2 Heading gehört, dann H3 verwenden. Beeinflusst die Größe der Labels nicht und wird nur für semantische Zwecke verwendet.",
+      "options": [
+        {
+
+        },
+        {
+
+        },
+        {
+
+        }
+      ],
+
+    }
+  ]
