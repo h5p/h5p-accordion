@@ -1,0 +1,48 @@
+{
+  "semantics": [
+    {
+      "englishLabel": "Panels",
+      "label": "Paneler",
+      "englishEntity": "panel",
+      "entity": "panel",
+      "field": {
+        "englishLabel": "Content",
+        "label": "Innhold",
+        "englishEntity": "content",
+        "entity": "innhold",
+        "fields": [
+          {
+            "englishLabel": "Title",
+            "label": "Tittel"
+          },
+          {
+            "englishLabel": "Content type",
+            "label": "Innholdstype",
+            "englishEntity": "content",
+            "entity": "innholdstype"
+          }
+        ]
+      }
+    },
+    {
+      "englishLabel": "H tags for labels (does not affect the size of the label)",
+      "label": "Header tag for overskrifter (påvirker ikke størrelsen til etiketten)",
+      "englishDescription": "The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "description": "H taggen brukes på overskrifter. Vanligvis er H2 korrekt, med mindre overskriften hører til under en H2 tag, bruk da H3. Påvirker ikke størrelsen på overskriftene, brukes bare for semantikk.",
+      "options": [
+        {
+          "englishLabel": "H2",
+          "label": "H2"
+        },
+        {
+          "englishLabel": "H3",
+          "label": "H3"
+        },
+        {
+          "englishLabel": "H4",
+          "label": "H4"
+        }
+      ]
+    }
+  ]
+}
