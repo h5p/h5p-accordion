@@ -10,6 +10,7 @@
       "name": "content",
       "type": "group",
       "label": "Content",
+      "importance": "high",
       "entity": "content",
       "fields": [
         {
