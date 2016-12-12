@@ -16,12 +16,14 @@
         {
           "name": "title",
           "type": "text",
-          "label": "Title"
+          "label": "Title",
+          "importance": "high"
         },
         {
           "name": "content",
           "type": "library",
           "label": "Content type",
+		  "importance": "medium",
           "entity": "content",
           "options": [
             "H5P.AdvancedText 1.1"
@@ -34,6 +36,7 @@
     "name": "hTag",
     "type": "select",
     "label": "H tags for labels (does not affect the size of the label)",
+	"importance": "low",
     "description": "The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
     "options": [
       {
