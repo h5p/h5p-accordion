@@ -23,7 +23,7 @@
           "name": "content",
           "type": "library",
           "label": "Content type",
-	  "importance": "medium",
+          "importance": "medium",
           "entity": "content",
           "options": [
             "H5P.AdvancedText 1.1"
