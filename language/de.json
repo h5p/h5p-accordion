@@ -1,0 +1,55 @@
+{
+  "semantics": [
+  {
+    "name": "panels",
+    "type": "list",
+    "label": "Einstellungen",
+    "entity": "panel",
+    "max": 100,
+    "min": 1,
+    "field": {
+      "name": "Inhalt",
+      "type": "group",
+      "label": "Content",
+      "entity": "content",
+      "fields": [
+        {
+          "name": "title",
+          "type": "text",
+          "label": "Titel"
+        },
+        {
+          "name": "content",
+          "type": "library",
+          "label": "Inhaltstyp",
+          "entity": "content",
+          "options": [
+            "H5P.AdvancedText 1.1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "hTag",
+    "type": "select",
+    "label": "H Tags für Labels (beeinflusst die Größe des Labels nicht)",
+    "description": "Der auf den Labeln verwendete h Tag. Normalerweise H2 aber wenn dies unter ein H2 Heading gehört, dann H3 verwenden. Beinflusst die Größe der Labels nicht und wird nur für semantische Zwecke verwendet.",
+    "options": [
+      {
+        "value": "h2",
+        "label": "H2"
+      },
+      {
+        "value": "h3",
+        "label": "H3"
+      },
+      {
+        "value": "h4",
+        "label": "H4"
+      }
+    ],
+    "default": "h2"
+  }
+]
+}
