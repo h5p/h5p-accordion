@@ -1,0 +1,49 @@
+{
+  "semantics": [
+    {
+      "englishLabel": "Panels",
+      "label": "Panelen",
+      "englishEntity": "panel",
+      "entity": "paneel",
+      "field": {
+        "englishLabel": "Content",
+        "label": "Inhoud",
+        "englishEntity": "content",
+        "entity": "Inhoud",
+        "fields": [
+          {
+            "englishLabel": "Title",
+            "label": "Titel"
+          },
+          {
+            "englishLabel": "Content type",
+            "label": "Content type",
+            "englishEntity": "content",
+            "entity": "content type"
+          }
+        ]
+      }
+    },
+    {
+      "englishLabel": "H tags for labels (does not affect the size of the label)",
+      "label": "Header tag voor labels (beïnvloedt de afmetingen van het label niet)",
+      "englishDescription": "The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "description": "Het H tag dat gebruikt wordt voor labels. Normaal gesproken H2, maar als dit onder een H2 heading hoort, gebruik dan H3. Dit beïnvloedt de afmetingen van de labels niet maar is enkel voor semantische doeleinden.",
+      "options": [
+        {
+          "englishLabel": "H2",
+          "label": "H2"
+        },
+        {
+          "englishLabel": "H3",
+          "label": "H3"
+        },
+        {
+          "englishLabel": "H4",
+          "label": "H4"
+        }
+      ],
+      "default": "h2"
+    }
+  ]
+}
