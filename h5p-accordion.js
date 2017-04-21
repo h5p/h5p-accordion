@@ -8,6 +8,7 @@ H5P.Accordion = (function ($) {
   var nextIdPrefix = 0;
   var nextLooperId = 0;
   var allowedLoopers = [];
+  var loadFirstPanel = true;
   /**
    * Initialize a new Accordion
    *
@@ -93,15 +94,24 @@ H5P.Accordion = (function ($) {
         // It is expanded, so collapse it.
         self.collapsePanel($title, $content);
       }
+      // The title that was clicked isn't expanded.
       else {
         // Check if you should close all other panels before opening this one.
         if (multipleAccordionsOpen === 'openOne') {
+          // Since the first panel is already open, and this is the first time through, you need to make sure $expandedTitle & $expandedPanel are set.
+          if (loadFirstPanel && expandCollapseOption === "expandedFirstOnly") {
+            self.$expandedTitle = $('#h5p-panel-link-0-0'); // Get the first panel title.
+            self.$expandedPanel = $('#h5p-panel-content-0-0'); // Get the first panel.
+          }
+          // Collaspse the expanded panels stored in $expandedTitle & $expandedPanel.
           self.collapseExpandedPanels();
         }
         // The panel is collapsed, so expand it.
         self.expandPanel($title, $content);
       }
 
+      // You only need to load this on the first time the accordion is loaded.
+      loadFirstPanel = false;
       // We're running in an iframe, so we must animate the iframe height
       self.animateResize();
     };
