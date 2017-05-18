@@ -100,8 +100,8 @@ H5P.Accordion = (function ($) {
         if (multipleAccordionsOpen === 'openOne') {
           // Since the first panel is already open, and this is the first time through, you need to make sure $expandedTitle & $expandedPanel are set.
           if (loadFirstPanel && expandCollapseOption === "expandedFirstOnly") {
-            self.$expandedTitle = $('#h5p-panel-link-0-0'); // Get the first panel title.
-            self.$expandedPanel = $('#h5p-panel-content-0-0'); // Get the first panel.
+            self.$expandedTitle = $(self.elements).eq(0);
+            self.$expandedPanel = $(self.elements).eq(1);
           }
           // Collaspse the expanded panels stored in $expandedTitle & $expandedPanel.
           self.collapseExpandedPanels();
