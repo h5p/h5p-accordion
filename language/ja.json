@@ -5,14 +5,14 @@
       "entity":"panel",
       "field":{
         "label":"コンテンツ",
-        "entity":"content",
+        "entity":"コンテンツ",
         "fields":[
           {
             "label":"タイトル"
           },
           {
             "label":"コンテンツタイプ",
-            "entity":"content"
+            "entity":"コンテンツ"
           }
         ]
       }
