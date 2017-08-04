@@ -1,0 +1,37 @@
+{
+  "semantics": [
+    {
+      "label": "Volets",
+      "entity": "un volet",
+      "field": {
+        "label": "Contenu",
+        "entity": "contenu",
+        "fields": [
+          {
+            "label": "Titre"
+          },
+          {
+            "label": "Type de contenu",
+            "entity": "contenu"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Balises de titre pour les étiquettes (n'affecte pas la taille de l'étiquette)",
+      "description": "Balise de titre utilisée pour les étiquettes. Normalement h2, mais si l'étiquette de l'accordéon se trouve à un niveau inférieur à un titre existant de niveau h2, utilisez h3. Cette balise n'affecte pas la taille des étiquettes et a seulement une valeur sémantique. ",
+      "options": [
+        {
+          "label": "H2"
+        },
+        {
+          "label": "H3"
+        },
+        {
+          "label": "H4"
+        }
+      ],
+      "default": "h2"
+    }
+  ]
+}
