@@ -11,15 +11,15 @@
             "label":"Titolo"
           },
           {
-            "label":"Content type",
-            "entity":"content"
+            "label":"Tipo di contenuto",
+            "entity":"contenuto"
           }
         ]
       }
     },
     {
-      "label":"H tags for labels (does not affect the size of the label)",
-      "description":"The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "label":"Tag H per etichette (non influisce sulla dimensione dell'etichetta)",
+      "description":"Tag H utilizzato sulle etichette. Normalmente H2, ma se questo si trova sotto un'intestazione H2 usa H3. Non influisce sulla dimensione delle etichette; usato solo per scopi semantici.",
       "options":[
         {
           "label":"H2"
