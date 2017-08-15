@@ -1,14 +1,14 @@
 {
   "semantics":[
     {
-      "label":"Panels",
+      "label":"Pannelli",
       "entity":"panel",
       "field":{
-        "label":"Content",
-        "entity":"content",
+        "label":"Contenuto",
+        "entity":"contenuto",
         "fields":[
           {
-            "label":"Title"
+            "label":"Titolo"
           },
           {
             "label":"Content type",
