@@ -1,17 +1,17 @@
 {
   "semantics":[
     {
-      "label":"Panels",
+      "label":"Paneelit",
       "entity":"panel",
       "field":{
-        "label":"Content",
+        "label":"Sisältö",
         "entity":"content",
         "fields":[
           {
-            "label":"Title"
+            "label":"Otsikko"
           },
           {
-            "label":"Content type",
+            "label":"Sisältötyyppi",
             "entity":"content"
           }
         ]
