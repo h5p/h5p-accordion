@@ -18,8 +18,8 @@
       }
     },
     {
-      "label":"H-tags für die Leisten (hat keinen Einfluss auf die Größe der Leiste)",
-      "description":"Das h-tag, das für die Leisten verwendet wird. Normalerweise H2, aber falls das Akkordeon unterhalb einer H2-Überschrift steht, kannst du H3 nutzen. Hat keinen Einfluss auf die Größe der Leiste und wird nur für semantische Zwecke verwendet.",
+      "label":"H-Tags für die Leisten (hat keinen Einfluss auf die Größe der Leiste)",
+      "description":"Das H-Tag, das für die Leisten verwendet wird. Normalerweise H2, aber falls das Akkordeon unterhalb einer H2-Überschrift steht, kannst du H3 nutzen. Es hat keinen Einfluss auf die Größe der Leiste und wird nur für semantische Zwecke verwendet.",
       "options":[
         {
           "label":"H2"
