@@ -1,25 +1,25 @@
 {
   "semantics":[
     {
-      "label":"Panels",
-      "entity":"panel",
+      "label":"Paneelit",
+      "entity":"paneeli",
       "field":{
-        "label":"Content",
-        "entity":"content",
+        "label":"Sisältö",
+        "entity":"sisältö",
         "fields":[
           {
-            "label":"Title"
+            "label":"Otsikko"
           },
           {
-            "label":"Content type",
-            "entity":"content"
+            "label":"Sisältötyyppi",
+            "entity":"sisältö"
           }
         ]
       }
     },
     {
-      "label":"H tags for labels (does not affect the size of the label)",
-      "description":"The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "label":"Otsikon H tagi (Ei vaikuta otsikon kokoon)",
+      "description":"H tagiä käytetään otsikoille. Tyypillisesti H2, mutta jos pitää olla alempitasoinen niin käytä H3. Ei vaikuta otsikon kokoon, käytetty vain kuvaavassa tarkoituksessa.",
       "options":[
         {
           "label":"H2"

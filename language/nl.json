@@ -18,8 +18,8 @@
       }
     },
     {
-      "label":"Header tag voor labels (beïnvloedt de afmetingen van het label niet)",
-      "description":"Het H tag dat gebruikt wordt voor labels. Normaal gesproken H2, maar als dit onder een H2 heading hoort, gebruik dan H3. Dit beïnvloedt de afmetingen van de labels niet maar is enkel voor semantische doeleinden.",
+      "label":"Hoofding tag voor labels (beïnvloedt de afmetingen van het label niet)",
+      "description":"De H-tag dat gebruikt wordt voor labels. Normaal gesproken H2, maar als dit onder een H2 heading hoort, gebruik dan H3. Dit beïnvloedt de afmetingen van de labels niet maar is enkel voor semantische doeleinden.",
       "options":[
         {
           "label":"H2"
