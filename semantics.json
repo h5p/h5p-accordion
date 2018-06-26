@@ -26,7 +26,10 @@
           "importance": "medium",
           "entity": "content",
           "options": [
-            "H5P.AdvancedText 1.1"
+            {
+              "name": "H5P.AdvancedText 1.1",
+              "hasmetadata": false
+            }
           ]
         }
       ]
