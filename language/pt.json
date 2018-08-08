@@ -1,25 +1,25 @@
 {
   "semantics":[
     {
-      "label":"Panels",
-      "entity":"panel",
+      "label":"Painéis",
+      "entity":"painel",
       "field":{
-        "label":"Content",
-        "entity":"content",
+        "label":"Conteúdo",
+        "entity":"conteúdo",
         "fields":[
           {
-            "label":"Title"
+            "label":"Título"
           },
           {
-            "label":"Content type",
-            "entity":"content"
+            "label":"Tipo de conteúdo",
+            "entity":"conteúdo"
           }
         ]
       }
     },
     {
-      "label":"H tags for labels (does not affect the size of the label)",
-      "description":"The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "label":"Tags H para etiquetas (não afeta o tamanho da etiqueta)",
+      "description":"A tag H utilizada nas etiquetas. Normalmente é utilizada H2 mas se pertencer a uma similar, utilize H3. Não afeta o tamanho das etiquetas, só sendo utilizada para efeitos semânticos.",
       "options":[
         {
           "label":"H2"
