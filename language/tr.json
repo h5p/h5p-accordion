@@ -1,25 +1,25 @@
 {
   "semantics":[
     {
-      "label":"Panels",
+      "label":"Paneller",
       "entity":"panel",
       "field":{
-        "label":"Content",
-        "entity":"content",
+        "label":"İçerik",
+        "entity":"içerik",
         "fields":[
           {
-            "label":"Title"
+            "label":"Başlık"
           },
           {
-            "label":"Content type",
-            "entity":"content"
+            "label":"İçerik türü",
+            "entity":"içeirk"
           }
         ]
       }
     },
     {
-      "label":"H tags for labels (does not affect the size of the label)",
-      "description":"The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "label":"Etiketler için H etiket değeri (etiketin boyutunu etkilemez)",
+      "description":"Etiketler üzerinde h etiketi kullanıldı. Normalde H2 kullanılır fakat H2 altındaysa bunu H3 olarak kullanın. Etiketlerin boyutunu etkilemeyecektir, sadece anlamsal amaçlar için kullanıldı.",
       "options":[
         {
           "label":"H2"
