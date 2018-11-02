@@ -1,34 +1,34 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Panels",
-      "entity":"panel",
-      "field":{
-        "label":"Content",
-        "entity":"content",
-        "fields":[
+      "label": "لوحات",
+      "entity": "panel",
+      "field": {
+        "label": "المحتوى",
+        "entity": "content",
+        "fields": [
           {
-            "label":"Title"
+            "label": "العنوان"
           },
           {
-            "label":"Content type",
-            "entity":"content"
+            "label": "نوع المحتوى",
+            "entity": "content"
           }
         ]
       }
     },
     {
-      "label":"H tags for labels (does not affect the size of the label)",
-      "description":"The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
-      "options":[
+      "label": "H tag للتسميات , ( لا يؤثر على حجم التسميات )",
+      "description": "h tag  المستخدمة في التسميات ,عادة يستخدم H2 وتحته H3 وهو لا يؤثر على حجم التسميات ويستخدم  فقط لأغراض توضيحية  ..",
+      "options": [
         {
-          "label":"H2"
+          "label": "H2"
         },
         {
-          "label":"H3"
+          "label": "H3"
         },
         {
-          "label":"H4"
+          "label": "H4"
         }
       ]
     }
