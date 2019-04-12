@@ -1,0 +1,36 @@
+{
+  "semantics": [
+    {
+      "label": "Панели",
+      "entity": "панел",
+      "field": {
+        "label": "Съдържание",
+        "entity": "съдържание",
+        "fields": [
+          {
+            "label": "Заглавие"
+          },
+          {
+            "label": "Тип съдържание",
+            "entity": "съдържание"
+          }
+        ]
+      }
+    },
+    {
+      "етикет": "H маркери за етикети (не влияе на размера на етикета)",
+      "описание": "The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "options": [
+        {
+          "label": "H2"
+        },
+        {
+          "label": "H3"
+        },
+        {
+          "label": "H4"
+        }
+      ]
+    }
+  ]
+}
