@@ -18,8 +18,8 @@
       }
     },
     {
-      "етикет": "H маркери за етикети (не влияе на размера на етикета)",
-      "описание": "The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "етикет": "H таг за етикети (не влияе на размера на етикета)",
+      "описание": "Тагът H, използван за етикети. Обикновено се използва H2, но ако това попада под H2 позиция се използва H3. Не засяга размера на етикетите, използва се само за семантични цели.",
       "options": [
         {
           "label": "H2"
