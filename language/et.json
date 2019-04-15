@@ -1,4 +1,4 @@
-{
+ï»¿{
   "semantics":[
     {
       "label":"Paneelid",
@@ -11,15 +11,15 @@
             "label":"Pealkiri"
           },
           {
-            "label":"Sisu tüüp",
+            "label":"Sisu tÃ¼Ã¼p",
             "entity":"sisu"
           }
         ]
       }
     },
     {
-      "label":"Pealkirja H tunnus (ei mõjuta pealkirja suurust)",
-      "description":"Pealkirjade h tunnus. Tavaliselt H2, kuid alapealkirjade puhul kasuta H3. Ei mõjuta pealkirjade suurust, kasutatakse üksnes eristaval eesmärgil.",
+      "label":"Pealkirja H tunnus (ei mÃµjuta pealkirja suurust)",
+      "description":"Pealkirjade h tunnus. Tavaliselt H2, kuid alapealkirjade puhul kasuta H3. Ei mÃµjuta pealkirjade suurust, kasutatakse Ã¼ksnes eristaval eesmÃ¤rgil.",
       "options":[
         {
           "label":"H2"
