@@ -1,25 +1,25 @@
 {
   "semantics":[
     {
-      "label":"Panels",
-      "entity":"panel",
+      "label":"Paneelid",
+      "entity":"paneel",
       "field":{
-        "label":"Content",
-        "entity":"content",
+        "label":"Sisu",
+        "entity":"sisu",
         "fields":[
           {
-            "label":"Title"
+            "label":"Pealkiri"
           },
           {
-            "label":"Content type",
-            "entity":"content"
+            "label":"Sisu tüüp",
+            "entity":"sisu"
           }
         ]
       }
     },
     {
-      "label":"H tags for labels (does not affect the size of the label)",
-      "description":"The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "label":"Pealkirja H tunnus (ei mõjuta pealkirja suurust)",
+      "description":"Pealkirjade h tunnus. Tavaliselt H2, kuid alapealkirjade puhul kasuta H3. Ei mõjuta pealkirjade suurust, kasutatakse üksnes eristaval eesmärgil.",
       "options":[
         {
           "label":"H2"
