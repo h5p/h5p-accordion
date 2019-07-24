@@ -1,25 +1,25 @@
 {
   "semantics":[
     {
-      "label":"Panels",
-      "entity":"panel",
+      "label":"Αναδιπλούμενα Πλαίσια",
+      "entity":"πλαισιου",
       "field":{
-        "label":"Content",
-        "entity":"content",
+        "label":"Περιεχόμενο",
+        "entity":"περιεχομενου",
         "fields":[
           {
-            "label":"Title"
+            "label":"Τίτλος"
           },
           {
-            "label":"Content type",
-            "entity":"content"
+            "label":"Τύπος περιεχομένου",
+            "entity":"περιεχομενου"
           }
         ]
       }
     },
     {
-      "label":"H tags for labels (does not affect the size of the label)",
-      "description":"The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "label":"Ετικέτες h για επικεφαλίδες (δεν επηρεάζει το μέγεθος της επικεφαλίδας)",
+      "description":"Η ετικέτα h που χρησιμοποιείται στις επικεφαλίδες. Κανονικά χρησιμοποιείται το H2 αλλά αν υπάγεται σε ένα H2 χρησιμοποιήστε το H3. Η ρύθμιση αυτή δεν επηρεάζει το μέγεθος των επικεφαλίδων, χρησιμοποιείται μόνο για σημασιολογικούς σκοπούς.",
       "options":[
         {
           "label":"H2"
