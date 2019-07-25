@@ -33,6 +33,44 @@
     }
   },
   {
+    "name": "expandCollapseOption",
+    "type": "select",
+    "label": "Accordion expand/collapse option",
+    "description": "Choose the default option for your accordion.",
+    "options": [
+      {
+        "value": "collapsedAll",
+        "label": "All panels collapsed"
+      },
+      {
+        "value": "expandedAll",
+        "label": "All panels expanded"
+      },
+      {
+        "value": "expandedFirstOnly",
+        "label": "Only first panel expanded"
+      }
+    ],
+    "default": "collapsedAll"
+  },
+  {
+    "name": "multipleAccordionsOpen",
+    "type": "select",
+    "label": "Should multiple accordions be open at once?",
+    "description": "Choose if you want to have multiple accordions open or just one open at a time.",
+    "options": [
+      {
+        "value": "openOne",
+        "label": "One accordion open at a time"
+      },
+      {
+        "value": "openMultiple",
+        "label": "Multiple accordions open at a time"
+      }
+    ],
+    "default": "openOne"
+  },
+  {
     "name": "hTag",
     "type": "select",
     "label": "H tags for labels (does not affect the size of the label)",

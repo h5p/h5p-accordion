@@ -8,6 +8,7 @@ H5P.Accordion = (function ($) {
   var nextIdPrefix = 0;
   var nextLooperId = 0;
   var allowedLoopers = [];
+  var loadFirstPanel = true;
   /**
    * Initialize a new Accordion
    *
@@ -24,6 +25,8 @@ H5P.Accordion = (function ($) {
     // Set default behavior.
     this.params = $.extend({}, {
       hTag: "h2",
+      expandCollapseOption: "collapsedAll",
+      multipleAccordionsOpen: "openOne",
       panels: []
     }, params);
 
@@ -64,12 +67,10 @@ H5P.Accordion = (function ($) {
     self.$content.appendTo(
       // Use container as tabpanel
       $container.html('')
-                .addClass('h5p-accordion')
+                .addClass("h5p-accordion " + this.params.expandCollapseOption)
                 .attr({
                   'role': 'tablist',
-                  'aria-multiselectable': 'false'
-                  // Must be changed if we ever allow more tab to be open
-                  // at the same time
+                  'aria-multiselectable': (this.params.multipleAccordionsOpen === "openOne" ? 'false' : 'true'),
                 })
     );
   };
@@ -82,28 +83,85 @@ H5P.Accordion = (function ($) {
     var self = this;
     var titleId = 'h5p-panel-link-' + this.idPrefix + id;
     var contentId = 'h5p-panel-content-' + self.idPrefix + id;
+    var expandCollapseOption = this.params.expandCollapseOption;
+    var multipleAccordionsOpen = this.params.multipleAccordionsOpen;
+    var titleAriaExpanded, titleAriaExpandedFirst, titlePanelExpanded, titlePanelExpandedFirst,
+      panelAriaHidden, panelAriaHiddenFirst, panelStyleDisplay, panelStyleDisplayFirst;
 
     var toggleCollapse = function () {
-      if (self.$expandedTitle === undefined || !self.$expandedTitle.is($title)) {
-        self.collapseExpandedPanels();
-        self.expandPanel($title, $content);
-      }
-      else {
+      // Check if the panel is already expanded.
+      if ($(this).hasClass("h5p-panel-expanded")) {
+        // It is expanded, so collapse it.
         self.collapsePanel($title, $content);
       }
+      // The title that was clicked isn't expanded.
+      else {
+        // Check if you should close all other panels before opening this one.
+        if (multipleAccordionsOpen === 'openOne') {
+          // Since the first panel is already open, and this is the first time through, you need to make sure $expandedTitle & $expandedPanel are set.
+          if (loadFirstPanel && expandCollapseOption === "expandedFirstOnly") {
+            self.$expandedTitle = $(self.elements).eq(0);
+            self.$expandedPanel = $(self.elements).eq(1);
+          }
+          // Collaspse the expanded panels stored in $expandedTitle & $expandedPanel.
+          self.collapseExpandedPanels();
+        }
+        // The panel is collapsed, so expand it.
+        self.expandPanel($title, $content);
+      }
 
+      // You only need to load this on the first time the accordion is loaded.
+      loadFirstPanel = false;
       // We're running in an iframe, so we must animate the iframe height
       self.animateResize();
     };
+    
+    // Switch for expandCollapseOption
+    switch (expandCollapseOption) {
+      case 'collapsedAll': {
+        titleAriaExpanded = true;
+        titleAriaExpandedFirst = titleAriaExpanded;
+        titlePanelExpanded = "";
+        titlePanelExpandedFirst = titlePanelExpanded;
+        panelAriaHidden = true;
+        panelAriaHiddenFirst = panelAriaHidden;
+        panelStyleDisplay = "";
+        panelStyleDisplayFirst = panelStyleDisplay;
+        break;
+      }
+      case 'expandedAll': {
+        titleAriaExpanded = true;
+        titleAriaExpandedFirst = titleAriaExpanded;
+        titlePanelExpanded = "h5p-panel-expanded";
+        titlePanelExpandedFirst = titlePanelExpanded;
+        panelAriaHidden = false;
+        panelAriaHiddenFirst = panelAriaHidden;
+        panelStyleDisplay = "display: block;";
+        panelStyleDisplayFirst = panelStyleDisplay;
+        break;
+      }
+      case 'expandedFirstOnly': {      
+        titleAriaExpanded = false;
+        titleAriaExpandedFirst = true;
+        titlePanelExpanded = "";
+        titlePanelExpandedFirst = "h5p-panel-expanded";
+        panelAriaHidden = true;
+        panelAriaHiddenFirst = false;
+        panelStyleDisplay = "";
+        panelStyleDisplayFirst = "display: block;";
+        break;
+      }
+      
+    }
 
     // Create panel title
     var $title =  $('<' + this.params.hTag + '/>', {
       'id': titleId,
-      'class': 'h5p-panel-title',
+      'class': 'h5p-panel-title ' + (id === 0 ? titlePanelExpandedFirst : titlePanelExpanded),
       'role': 'tab',
       'tabindex': (id === 0 ? '0' : '-1'),
       'aria-selected': (id === 0 ? 'true' : 'false'),
-      'aria-expanded': 'false',
+      'aria-expanded': (id === 0 ? titleAriaExpandedFirst : titleAriaExpanded),
       'aria-controls': contentId,
       'html': self.params.panels[id].title,
       'on': {
@@ -158,7 +216,8 @@ H5P.Accordion = (function ($) {
       'class': 'h5p-panel-content',
       'role': 'tabpanel',
       'aria-labelledby': titleId,
-      'aria-hidden': 'true'
+      'aria-hidden': (id === 0 ? panelAriaHiddenFirst : panelAriaHidden),
+      'style': (id === 0 ? panelStyleDisplayFirst : panelStyleDisplay),      
     });
 
     // Add the content itself to the content section
