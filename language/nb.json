@@ -11,8 +11,11 @@
             "label": "Tittel"
           },
           {
-            "label": "Innholdstype",
-            "entity": "innhold"
+            "label": "Innholder",
+            "entity": "innhold",
+            "field": {
+              "label": "Innholdstype"
+            }
           }
         ]
       }

@@ -11,8 +11,11 @@
             "label":"Başlık"
           },
           {
-            "label":"İçerik türü",
-            "entity":"içeirk"
+            "label": "Contents",
+            "entity": "içeirk",
+            "field": {
+              "label": "İçerik türü"
+            }
           }
         ]
       }

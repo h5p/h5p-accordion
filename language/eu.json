@@ -11,8 +11,11 @@
             "label": "Izenburua"
           },
           {
-            "label": "Eduki-mota",
-            "entity": "edukia"
+            "label": "Contents",
+            "entity": "edukia",
+            "field": {
+              "label": "Eduki-mota"
+            }
           }
         ]
       }

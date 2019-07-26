@@ -11,8 +11,11 @@
             "label": "العنوان"
           },
           {
-            "label": "نوع المحتوى",
-            "entity": "content"
+            "label": "Contents",
+            "entity": "content",
+            "field": {
+              "label": "نوع المحتوى"
+            }
           }
         ]
       }

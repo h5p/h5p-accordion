@@ -11,8 +11,11 @@
             "label":"Otsikko"
           },
           {
-            "label":"Sisältötyyppi",
-            "entity":"sisältö"
+            "label": "Contents",
+            "entity": "sisältö",
+            "field": {
+              "label": "Sisältötyyppi"
+            }
           }
         ]
       }

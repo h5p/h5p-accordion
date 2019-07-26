@@ -38,6 +38,8 @@
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+.h5p-accordion .h5p-panel-content-wrapper {
+}
 .h5p-accordion .h5p-panel-content {
   display: none;
   padding: 0 1em;

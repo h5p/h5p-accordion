@@ -11,8 +11,11 @@
             "label":"Pealkiri"
           },
           {
-            "label":"Sisu tüüp",
-            "entity":"sisu"
+            "label": "Contents",
+            "entity": "sisu",
+            "field": {
+              "label": "Sisu tüüp"
+            }
           }
         ]
       }

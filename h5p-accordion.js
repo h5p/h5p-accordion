@@ -29,10 +29,27 @@ H5P.Accordion = (function ($) {
 
     this.contentData = contentData;
 
-    this.instances = [];
+    this.panels = [];
 
     for (var i = 0; i < this.params.panels.length; i++) {
-      this.instances[i] = H5P.newRunnable(this.params.panels[i].content, contentId);
+      this.panels[i] = {instances: []};
+      if (!this.params.panels[i].contents) {
+        continue; // Skip empty panels
+      }
+
+      // Build panel content instances
+      for (var j = 0; j < this.params.panels[i].contents.length; j++) {
+        var currentContent = this.params.panels[i].contents[j];
+        this.panels[i].instances[j] = H5P.newRunnable(currentContent, contentId);
+
+        // Resize images when loaded
+        if (currentContent.library === 'H5P.Image') {
+          this.panels[i].instances[j].on('loaded', function () {
+            self.trigger('resize');
+          });
+        }
+
+      }
     }
 
     this.idPrefix = (nextIdPrefix++) + '-';
@@ -152,8 +169,14 @@ H5P.Accordion = (function ($) {
       'aria-hidden': 'true'
     });
 
-    // Add the content itself to the content section
-    self.instances[id].attach($content);
+    // Add contents to the content section
+    self.panels[id].instances.forEach( function (instance) {
+      var $contentWrapper = $('<div>', {
+        'class': 'h5p-panel-content-wrapper'
+      });
+      instance.attach($contentWrapper);
+      $content.append($contentWrapper);
+    } );
 
     // Gather all content
     self.elements.push($title[0]);

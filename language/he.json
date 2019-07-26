@@ -11,8 +11,11 @@
             "label": "כותרת"
           },
           {
-            "label": "סוג תוכן",
+            "label": "Contents",
             "entity": "תוכן"
+            "field": {
+              "label": "סוג תוכן",
+            }
           }
         ]
       }

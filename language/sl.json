@@ -11,8 +11,11 @@
             "label": "Naslov"
           },
           {
-            "label": "Tip vsebine",
-            "entity": "content"
+            "label": "Contents",
+            "entity": "content",
+            "field": {
+              "label": "Tip vsebine"
+            }
           }
         ]
       }

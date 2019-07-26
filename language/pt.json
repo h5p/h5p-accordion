@@ -11,8 +11,11 @@
             "label": "Título"
           },
           {
-            "label": "Tipo de conteúdo",
-            "entity": "content"
+            "label": "Contents",
+            "entity": "content",
+            "field": {
+              "label": "Tipo de conteúdo"
+            }
           }
         ]
       }

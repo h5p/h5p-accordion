@@ -11,8 +11,11 @@
             "label": "標題"
           },
           {
-            "label": "內容",
-            "entity": "content"
+            "label": "Contents",
+            "entity": "content",
+            "field": {
+              "label": "內容"
+            }
           }
         ]
       }

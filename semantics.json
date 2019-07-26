@@ -20,14 +20,22 @@
           "importance": "high"
         },
         {
-          "name": "content",
-          "type": "library",
-          "label": "Content type",
-          "importance": "medium",
+          "name": "contents",
+          "type": "list",
+          "label": "Contents",
           "entity": "content",
-          "options": [
-            "H5P.AdvancedText 1.1"
-          ]
+          "max": 100,
+          "min": 1,
+          "field": {
+            "name": "content",
+            "type": "library",
+            "label": "Content",
+            "importance": "medium",
+            "options": [
+              "H5P.AdvancedText 1.1",
+              "H5P.Image 1.1"
+            ]
+          }
         }
       ]
     }
