@@ -78,7 +78,17 @@ H5P.Accordion = (function ($) {
     }
 
     // Insert content
-    $container.html('').addClass('h5p-accordion').append(self.$content);
+    self.$content.appendTo(
+      // Use container as tabpanel
+      $container.html('')
+        .addClass('h5p-accordion')
+        .attr({
+          'role': 'tablist',
+          'aria-multiselectable': 'false'
+          // Must be changed if we ever allow more tab to be open
+          // at the same time
+        })
+    );
   };
 
   /**
@@ -229,7 +239,7 @@ H5P.Accordion = (function ($) {
    * @param {jQuery} $title The title of the panel that is to be expanded
    * @param {jQuery} $panel The panel that is to be expanded
    */
-  Accordion.prototype.expandPanel = function($title, $panel) {
+  Accordion.prototype.expandPanel = function ($title, $panel) {
     var self = this;
 
     $title.attr('aria-expanded', true)
@@ -253,7 +263,7 @@ H5P.Accordion = (function ($) {
    * @param {jQuery} $title The title of the panel that is to be collapsed
    * @param {jQuery} $panel The panel that is to be collapsed
    */
-  Accordion.prototype.collapsePanel = function($title, $panel) {
+  Accordion.prototype.collapsePanel = function ($title, $panel) {
     var self = this;
     $title.attr('aria-expanded', false)
       .removeClass('h5p-panel-expanded');
@@ -264,7 +274,7 @@ H5P.Accordion = (function ($) {
         self.trigger('resize');
       })
       .attr('aria-hidden', true);
-     self.$expandedTitle = self.$expandedPanel = undefined;
+    self.$expandedTitle = self.$expandedPanel = undefined;
   };
 
   /**
@@ -282,7 +292,7 @@ H5P.Accordion = (function ($) {
     var myId = nextLooperId++;
     var self = this;
     allowedLoopers.push(myId);
-    var looper = function(func, wait, myId) {
+    var looper = function (func, wait, myId) {
       return function () {
         if (self.allowedToWork(myId)) {
           try {
