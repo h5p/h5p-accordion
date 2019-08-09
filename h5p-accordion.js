@@ -42,10 +42,12 @@ H5P.Accordion = (function ($) {
         var currentContent = this.params.panels[i].contents[j];
         this.panels[i].instances[j] = H5P.newRunnable(currentContent, contentId);
 
+        var currentLibrary = currentContent.library.split(' ')[0];
+
         // Resize images when loaded
-        if (currentContent.library === 'H5P.Image') {
+        if (currentLibrary === 'H5P.Image') {
           this.panels[i].instances[j].on('loaded', function () {
-            self.trigger('resize');
+            this.trigger('resize');
           });
         }
 
