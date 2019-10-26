@@ -2,7 +2,7 @@
   "semantics":[
     {
       "label":"Pannelli",
-      "entity":"panel",
+      "entity":"pannello",
       "field":{
         "label":"Contenuto",
         "entity":"contenuto",
@@ -18,17 +18,17 @@
       }
     },
     {
-      "label":"Tag H per etichette (non influisce sulla dimensione dell'etichetta)",
-      "description":"Tag H utilizzato sulle etichette. Normalmente H2, ma se questo si trova sotto un'intestazione H2 usa H3. Non influisce sulla dimensione delle etichette; usato solo per scopi semantici.",
+      "label":"Tag Titolo per etichette (non influisce sulla dimensione dell'etichetta)",
+      "description":"Tag Titolo utilizzato sulle etichette. Normalmente Titolo 2, ma se questo si trova sotto un'intestazione Titolo 2 usa Titolo 3. Non influisce sulla dimensione delle etichette; usato solo per scopi semantici.",
       "options":[
         {
-          "label":"H2"
+          "label":"Titolo 2"
         },
         {
-          "label":"H3"
+          "label":"Titolo 3"
         },
         {
-          "label":"H4"
+          "label":"Titolo 4"
         }
       ]
     }
