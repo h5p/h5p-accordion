@@ -61,17 +61,7 @@ H5P.Accordion = (function ($) {
     }
 
     // Insert content
-    self.$content.appendTo(
-      // Use container as tabpanel
-      $container.html('')
-                .addClass('h5p-accordion')
-                .attr({
-                  'role': 'tablist',
-                  'aria-multiselectable': 'false'
-                  // Must be changed if we ever allow more tab to be open
-                  // at the same time
-                })
-    );
+    $container.html('').addClass('h5p-accordion').append(self.$content);
   };
 
   /**
@@ -100,7 +90,7 @@ H5P.Accordion = (function ($) {
     var $title =  $('<' + this.params.hTag + '/>', {
       'id': titleId,
       'class': 'h5p-panel-title',
-      'role': 'tab',
+      'role': 'button',
       'tabindex': (id === 0 ? '0' : '-1'),
       'aria-selected': (id === 0 ? 'true' : 'false'),
       'aria-expanded': 'false',
@@ -143,7 +133,8 @@ H5P.Accordion = (function ($) {
               return false;
             }
 
-            case 32: {
+            case 32:   // SPACE
+            case 13: { // ENTER
               toggleCollapse();
               return false;
             }
@@ -156,7 +147,7 @@ H5P.Accordion = (function ($) {
     var $content = $('<div>', {
       'id': contentId,
       'class': 'h5p-panel-content',
-      'role': 'tabpanel',
+      'role': 'region',
       'aria-labelledby': titleId,
       'aria-hidden': 'true'
     });
@@ -195,7 +186,7 @@ H5P.Accordion = (function ($) {
     var self = this;
     if (this.$expandedTitle !== undefined) {
       this.$expandedTitle
-        .attr('aria-expanded', false )
+        .attr('aria-expanded', false)
         .removeClass('h5p-panel-expanded');
     }
     if (this.$expandedPanel !== undefined) {
