@@ -1,25 +1,25 @@
 {
   "semantics":[
     {
-      "label":"Panels",
+      "label":"Panely",
       "entity":"panel",
       "field":{
-        "label":"Content",
-        "entity":"content",
+        "label":"Obsah",
+        "entity":"obsah",
         "fields":[
           {
-            "label":"Title"
+            "label":"Nadpis"
           },
           {
-            "label":"Content type",
-            "entity":"content"
+            "label":"Typ obsahu",
+            "entity":"obsah"
           }
         ]
       }
     },
     {
-      "label":"H tags for labels (does not affect the size of the label)",
-      "description":"The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "label":"Tagy H pro popisky (nemá vliv na velikost štítku)",
+      "description":"Tag h použitý na popisku. Normálně H2, ale pokud patří pod hlavičku H2, použijte H3. Nemá vliv na velikost popisku, které se používají pouze pro sémantické účel.",
       "options":[
         {
           "label":"H2"
