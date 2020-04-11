@@ -12,7 +12,7 @@
           },
           {
             "label": "Contents",
-            "entity": "תוכן"
+            "entity": "תוכן",
             "field": {
               "label": "סוג תוכן",
             }
