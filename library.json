@@ -1,8 +1,8 @@
 {
   "title": "Accordion",
   "majorVersion": 1,
-  "minorVersion": 0,
-  "patchVersion": 30,
+  "minorVersion": 1,
+  "patchVersion": 0,
   "embedTypes": [
     "iframe"
   ],

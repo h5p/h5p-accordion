@@ -5,16 +5,7 @@
       "entity":"패널",
       "field":{
         "label":"콘텐츠",
-        "entity":"콘텐츠",
-        "fields":[
-          {
-            "label":"제목"
-          },
-          {
-            "label":"콘텐츠 유형",
-            "entity":"콘텐츠"
-          }
-        ]
+        "entity":"콘텐츠"
       }
     },
     {

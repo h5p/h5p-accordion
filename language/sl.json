@@ -5,16 +5,7 @@
       "entity": "panel",
       "field": {
         "label": "Vsebina",
-        "entity": "content",
-        "fields": [
-          {
-            "label": "Naslov"
-          },
-          {
-            "label": "Tip vsebine",
-            "entity": "content"
-          }
-        ]
+        "entity": "content"
       }
     },
     {

@@ -1,20 +1,11 @@
 {
   "semantics": [
     {
-      "label": "パネル",
-      "entity": "パネル",
-      "field": {
-        "label": "コンテンツ",
-        "entity": "コンテンツ",
-        "fields": [
-          {
-            "label": "タイトル"
-          },
-          {
-            "label": "コンテンツタイプ",
-            "entity": "コンテンツ"
-          }
-        ]
+      "label":"パネル",
+      "entity":"パネル",
+      "field":{
+        "label":"コンテンツ",
+        "entity":"コンテンツ"
       }
     },
     {

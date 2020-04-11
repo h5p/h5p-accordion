@@ -8,27 +8,12 @@
     "min": 1,
     "field": {
       "name": "content",
-      "type": "group",
+      "type": "library",
       "label": "Content",
-      "importance": "high",
+      "importance": "medium",
       "entity": "content",
-      "fields": [
-        {
-          "name": "title",
-          "type": "text",
-          "label": "Title",
-          "importance": "high"
-        },
-        {
-          "name": "content",
-          "type": "library",
-          "label": "Content type",
-          "importance": "medium",
-          "entity": "content",
-          "options": [
-            "H5P.AdvancedText 1.1"
-          ]
-        }
+      "options": [
+        "H5P.Column 1.11"
       ]
     }
   },

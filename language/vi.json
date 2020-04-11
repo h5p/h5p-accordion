@@ -1,20 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Panels",
-      "entity": "panel",
-      "field": {
-        "label": "Nội dung",
-        "entity": "nội dung",
-        "fields": [
-          {
-            "label": "Tiêu đề"
-          },
-          {
-            "label": "Dạng nội dung",
-            "entity": "nội dung"
-          }
-        ]
+      "label":"Panels",
+      "entity":"panel",
+      "field":{
+        "label":"Dạng nội dung",
+        "entity":"nội dung"
       }
     },
     {
