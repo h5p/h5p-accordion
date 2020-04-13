@@ -14,7 +14,8 @@
       "entity": "content",
       "options": [
         "H5P.Column 1.11"
-      ]
+      ],
+      "widget": "editorAccordion"
     }
   },
   {

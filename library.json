@@ -27,6 +27,13 @@
       "minorVersion": 5
     }
   ],
+  "editorDependencies": [
+    {
+      "machineName": "H5PEditor.Accordion",
+      "majorVersion": 1,
+      "minorVersion": 0
+    }
+  ],
   "preloadedCss": [
     {
       "path": "h5p-accordion.css"
