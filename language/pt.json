@@ -2,17 +2,17 @@
   "semantics": [
     {
       "label": "Painéis",
-      "entity": "panel",
+      "entity": "painel",
       "field": {
         "label": "Conteúdo",
-        "entity": "content",
+        "entity": "conteúdo",
         "fields": [
           {
             "label": "Título"
           },
           {
             "label": "Tipo de conteúdo",
-            "entity": "content"
+            "entity": "conteúdo"
           }
         ]
       }
