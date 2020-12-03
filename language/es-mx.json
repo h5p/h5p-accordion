@@ -5,7 +5,7 @@
       "entity": "panel",
       "field": {
         "label": "Contenido",
-        "entity": "contenido",
+        "entity": "contenido"
       }
     },
     {
