@@ -18,7 +18,7 @@ H5PUpgrades['H5P.Accordion'] = (function () {
           for (i = 0; i < parameters.panels.length; i++) {
             // Create Column parameters with previous text as sole content
             parameters.panels[i] = {
-              library: "H5P.Column 1.11",
+              library: "H5P.Column 1.13",
               // We avoid using H5P.createUUID since this is an upgrade script and H5P function may change
               subContentId: 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (char) {
                 const random = Math.random() * 16 | 0, newChar = char === 'x' ? random : (random & 0x3 | 0x8);

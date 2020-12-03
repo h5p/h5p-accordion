@@ -13,7 +13,7 @@
       "importance": "medium",
       "entity": "content",
       "options": [
-        "H5P.Column 1.11"
+        "H5P.Column 1.13"
       ],
       "widget": "editorAccordion"
     }
