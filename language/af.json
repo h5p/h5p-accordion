@@ -2,24 +2,24 @@
   "semantics": [
     {
       "label": "Panele",
-      "entity": "panel",
+      "entity": "paneel",
       "field": {
-        "label": "Content",
-        "entity": "content",
+        "label": "Inhoud",
+        "entity": "inhoud",
         "fields": [
           {
-            "label": "Title"
+            "label": "Titel"
           },
           {
-            "label": "Content type",
-            "entity": "content"
+            "label": "Inhoud tipe",
+            "entity": "inhoud"
           }
         ]
       }
     },
     {
-      "label": "H tags for labels (does not affect the size of the label)",
-      "description": "The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "label": "H merker vir etiket (verander nie die grote van die etiket nie)",
+      "description": "Die h-tag wat op die etikette gebruik word. Normaalweg H2, maar as dit onder 'n H2-opskrif hoort, gebruik H3. Beïnvloed nie die grootte van die etikette nie, slegs vir semantiese doeleindes.",
       "options": [
         {
           "label": "H2"
