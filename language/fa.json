@@ -1,0 +1,36 @@
+{
+    "semantics": [
+        {
+            "label": "",
+            "entity": "",
+            "field": {
+                "label": "",
+                "entity": "",
+                "fields": [
+                    {
+                        "label": ""
+                    },
+                    {
+                        "label": "",
+                        "entity": ""
+                    }
+                ]
+            }
+        },
+        {
+            "label": "",
+            "description": "",
+            "options": [
+                {
+                    "label": ""
+                },
+                {
+                    "label": ""
+                },
+                {
+                    "label": ""
+                }
+            ]
+        }
+    ]
+}
