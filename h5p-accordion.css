@@ -41,6 +41,7 @@
 .h5p-accordion .h5p-panel-content {
   display: none;
   padding: 0 1em;
+  word-break: break-word;
 }
 .h5p-accordion .h5p-panel-content p {
   margin-top: 0;
