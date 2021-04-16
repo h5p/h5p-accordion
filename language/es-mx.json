@@ -19,7 +19,7 @@
     },
     {
       "label": "H tags para etiquetas (no afecta el tamaño de la etiqueta)",
-      "description": "La etiqueta h usada en las etiquetas. Normalmente H2 pero si esto pertenece a un rumbo H2 usa H3. No afecta el tamaño de las etiquetas, solo se usa con fines semánticos.",
+      "description": "La h tag (etiqueta h) usada en las etiquetas. Normalmente H2 pero si esto pertenece a un encabezado H2 usará H3. No afecta el tamaño de las etiquetas, solo se usa con fines semánticos.",
       "options": [
         {
           "label": "H2"
