@@ -3,7 +3,7 @@
 }
 .h5p-accordion .h5p-panel-title {
   margin: 0;
-  padding: 0.8em 0.8em 0.8em 2.25em;
+  padding: 0.8em 0.8em 0.8em 1em;
   color: #111111;
   position: relative;
   font-size: 1.25em;
@@ -23,9 +23,14 @@
   border-top: 0;
 }
 .h5p-accordion .h5p-panel-title:before {
-  font-family: 'H5PFontAwesome4';
-  content: "\f105";
+  color: black;
+  content: "\203A";
+  font-size: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
   position: absolute;
+  padding-right: 15px;
+  padding-left: 0px;
   left: 0.95em;
   -webkit-transition: all 200ms ease 0s;
   -moz-transition: all 200ms ease 0s;
