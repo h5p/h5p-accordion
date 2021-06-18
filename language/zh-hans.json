@@ -5,16 +5,7 @@
       "entity": "区块",
       "field": {
         "label": "区块",
-        "entity": "内容",
-        "fields": [
-          {
-            "label": "标题"
-          },
-          {
-            "label": "内容",
-            "entity": "内容"
-          }
-        ]
+        "entity": "内容"
       }
     },
     {
