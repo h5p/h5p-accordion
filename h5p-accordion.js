@@ -91,7 +91,7 @@ H5P.Accordion = (function ($) {
       'id': titleId,
       'class': 'h5p-panel-title',
       'role': 'button',
-      'tabindex': (id === 0 ? '0' : '-1'),
+      'tabindex': '0',
       'aria-selected': (id === 0 ? 'true' : 'false'),
       'aria-expanded': 'false',
       'aria-controls': contentId,
@@ -106,11 +106,9 @@ H5P.Accordion = (function ($) {
               var $prev = $title.prev().prev();
               if ($prev.length) {
                 $prev.attr({
-                  'tabindex': '0',
                   'aria-selected': 'true'
                 }).focus();
                 $title.attr({
-                  'tabindex': '-1',
                   'aria-selected': 'false'
                 });
               }
@@ -122,11 +120,9 @@ H5P.Accordion = (function ($) {
               var $next = $content.next();
               if ($next.length) {
                 $next.attr({
-                  'tabindex': '0',
                   'aria-selected': 'true'
                 }).focus();
                 $title.attr({
-                  'tabindex': '-1',
                   'aria-selected': 'false'
                 });
               }
