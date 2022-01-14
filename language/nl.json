@@ -1,34 +1,34 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Panelen",
-      "entity":"paneel",
-      "field":{
-        "label":"Inhoud",
-        "entity":"Inhoud",
-        "fields":[
+      "label": "Panelen",
+      "entity": "paneel",
+      "field": {
+        "label": "Inhoud",
+        "entity": "inhoud",
+        "fields": [
           {
-            "label":"Titel"
+            "label": "Titel"
           },
           {
-            "label":"Content type",
-            "entity":"content type"
+            "label": "Inhoudstype",
+            "entity": "inhoudstype"
           }
         ]
       }
     },
     {
-      "label":"De kopmarkering voor titels (Deze beïnvloedt de afmetingen van het label niet)",
-      "description":"De H-markering wordt gebruikt voor koppen. Normaal gesproken H2, maar als dit onder een H2 heading hoort, gebruik dan H3. Dit beïnvloedt de afmetingen van de labels niet maar is enkel voor semantische doeleinden.",
-      "options":[
+      "label": "De kopmarkering voor titels (heeft geen invloed op de afmetingen van het label)",
+      "description": "De H-markering wordt gebruikt voor koppen. Normaal gesproken H2, maar als die onder een H2 kop hoort, gebruik dan H3. Dit beïnvloedt de afmetingen van de labels niet, maar is enkel voor semantische doeleinden.",
+      "options": [
         {
-          "label":"H2"
+          "label": "H2"
         },
         {
-          "label":"H3"
+          "label": "H3"
         },
         {
-          "label":"H4"
+          "label": "H4"
         }
       ]
     }
