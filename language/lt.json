@@ -1,8 +1,8 @@
 {
   "semantics": [
     {
-      "label": "Elementai",
-      "entity": "elementas",
+      "label": "Skydeliai",
+      "entity": "skydelis",
       "field": {
         "label": "Turinys",
         "entity": "turinys",
