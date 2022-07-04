@@ -283,5 +283,15 @@ H5P.Accordion = (function ($) {
     return allowedLoopers.indexOf(myId) !== -1;
   };
 
+  /**
+   * Get page title
+   * @param {boolean} turncatedTitle turncate title flag
+   * @returns {String} Page title
+   */
+  Accordion.prototype.getTitle = function (turncatedTitle = true) {
+    const pageTitle = (this.contentData && this.contentData.metadata && this.contentData.metadata.title) ? this.contentData.metadata.title : 'Accordion';
+    return turncatedTitle ? H5P.createTitle(pageTitle) : pageTitle;
+  };
+
   return Accordion;
 })(H5P.jQuery);
