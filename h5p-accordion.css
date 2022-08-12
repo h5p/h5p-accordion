@@ -20,6 +20,7 @@
   height: 100%;
   display: inline-flex;
   padding: 0.8em 0.8em 0.8em 2.25em;
+  word-break: break-all;
 
   /* Disable default button styling */
   background: none;
@@ -28,6 +29,7 @@
 	font: inherit;
 	cursor: pointer;
 	outline: none;
+  text-align: left;
 }
 .h5p-accordion .h5p-panel-title:hover,
 .h5p-accordion .h5p-panel-title:focus-within,
