@@ -5,16 +5,7 @@
       "entity": "panelis",
       "field": {
         "label": "Saturs",
-        "entity": "saturs",
-        "fields": [
-          {
-            "label": "Nosaukums"
-          },
-          {
-            "label": "Satura veids",
-            "entity": "saturs"
-          }
-        ]
+        "entity": "saturs"
       }
     },
     {

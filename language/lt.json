@@ -5,16 +5,7 @@
       "entity": "skydelis",
       "field": {
         "label": "Turinys",
-        "entity": "turinys",
-        "fields": [
-          {
-            "label": "Pavadinimas"
-          },
-          {
-            "label": "Turinio tipas",
-            "entity": "turinys"
-          }
-        ]
+        "entity": "turinys"
       }
     },
     {
