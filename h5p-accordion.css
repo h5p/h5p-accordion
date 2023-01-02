@@ -20,7 +20,6 @@
   height: 100%;
   display: inline-flex;
   padding: 0.8em 0.8em 0.8em 2.25em;
-  word-break: break-all;
 
   /* Disable default button styling */
   background: none;
