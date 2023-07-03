@@ -3,18 +3,9 @@
     {
       "label": "Taulers",
       "entity": "tauler",
-      "field": {
-        "label": "Contingut",
-        "entity": "contingut",
-        "fields": [
-          {
-            "label": "Títol"
-          },
-          {
-            "label": "Tipus de contingut",
-            "entity": "contingut"
-          }
-        ]
+      "field":{
+        "label":"Contingut",
+        "entity":"contingut"
       }
     },
     {

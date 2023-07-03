@@ -5,16 +5,7 @@
       "entity": "panel",
       "field": {
         "label": "Contenido",
-        "entity": "contenido",
-        "fields": [
-          {
-            "label": "Título"
-          },
-          {
-            "label": "Tipo de contenido",
-            "entity": "contenido"
-          }
-        ]
+        "entity": "contenido"
       }
     },
     {

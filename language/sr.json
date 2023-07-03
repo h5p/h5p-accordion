@@ -5,16 +5,7 @@
       "entity":"panel",
       "field":{
         "label":"Садржај",
-        "entity":"content",
-        "fields":[
-          {
-            "label":"Наслов"
-          },
-          {
-            "label":"Тип садржаја",
-            "entity":"content"
-          }
-        ]
+        "entity":"content"
       }
     },
     {

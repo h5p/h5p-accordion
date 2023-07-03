@@ -5,16 +5,7 @@
       "entity": "panela",
       "field": {
         "label": "Edukia",
-        "entity": "edukia",
-        "fields": [
-          {
-            "label": "Izenburua"
-          },
-          {
-            "label": "Eduki mota",
-            "entity": "edukia"
-          }
-        ]
+        "entity": "edukia"
       }
     },
     {

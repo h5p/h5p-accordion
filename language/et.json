@@ -5,16 +5,7 @@
       "entity":"paneel",
       "field":{
         "label":"Sisu",
-        "entity":"sisu",
-        "fields":[
-          {
-            "label":"Pealkiri"
-          },
-          {
-            "label":"Sisu tüüp",
-            "entity":"sisu"
-          }
-        ]
+        "entity":"sisu"
       }
     },
     {

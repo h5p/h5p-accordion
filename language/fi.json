@@ -5,16 +5,7 @@
       "entity":"paneeli",
       "field":{
         "label":"Sisältö",
-        "entity":"sisältö",
-        "fields":[
-          {
-            "label":"Otsikko"
-          },
-          {
-            "label":"Sisältötyyppi",
-            "entity":"sisältö"
-          }
-        ]
+        "entity":"sisältö"
       }
     },
     {

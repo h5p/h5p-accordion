@@ -5,16 +5,7 @@
       "entity": "Abschnitt",
       "field": {
         "label": "Inhalt",
-        "entity": "Inhalt",
-        "fields": [
-          {
-            "label": "Titel"
-          },
-          {
-            "label": "Inhaltstyp",
-            "entity": "Inhalt"
-          }
-        ]
+        "entity": "Inhalt"
       }
     },
     {
