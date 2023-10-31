@@ -53,5 +53,14 @@
       }
     ],
     "default": "h2"
+  },
+  {
+    "name": "sortByLabels",
+    "type": "boolean",
+    "label": "Sort panels by title",
+    "description": "If checked, the panels will be displayed in alphabetical order based on the panel title.",
+    "importance": "low",
+    "default": false,
+    "optional": true
   }
 ]

@@ -27,6 +27,15 @@ H5P.Accordion = (function ($) {
       panels: []
     }, params);
 
+    if (params.sortByLabels) {
+      this.params.panels = this.params.panels.sort((panel1, panel2) => {
+        if (panel1.title === panel2.title) {
+          return 0;
+        }
+        return (panel1.title < panel2.title) ? -1 : 1;
+      });
+    }
+
     this.contentData = contentData;
 
     this.instances = [];
@@ -129,7 +138,7 @@ H5P.Accordion = (function ($) {
             }
           }
         },
-        // The class needs to be set programmatically as the title 
+        // The class needs to be set programmatically as the title
         // is not able to detect focus-visible on the button
         'focus': function () {
           if($titleButton.is(':focus-visible')) {
