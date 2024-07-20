@@ -1,5 +1,5 @@
 {
-  "semantics":[
+  "semantics": [
     {
       "label":"Panely",
       "entity":"panel",
@@ -9,17 +9,17 @@
       }
     },
     {
-      "label":"Tagy H pro popisky (nemá vliv na velikost štítku)",
-      "description":"Tag h použitý na popisku. Normálně H2, ale pokud patří pod hlavičku H2, použijte H3. Nemá vliv na velikost popisku, které se používají pouze pro sémantické účel.",
-      "options":[
+      "label": "Označení pro úroveň nadpisu (neovlivňuje velikost nadpisu)",
+      "description": "Nastavení úrovně nadpisu. Normální text spadá pod H2, ale pokud H2 představuje nadpis, použijte H3. Nemá vliv na velikost popisku, využívá se pouze pro sémantické účely.",
+      "options": [
         {
-          "label":"H2"
+          "label": "H2"
         },
         {
-          "label":"H3"
+          "label": "H3"
         },
         {
-          "label":"H4"
+          "label": "H4"
         }
       ]
     }

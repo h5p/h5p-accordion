@@ -1,7 +1,7 @@
 {
   "semantics": [
     {
-      "label":"Panels",
+      "label":"Bảng điều khiển",
       "entity":"panel",
       "field":{
         "label":"Dạng nội dung",
@@ -9,8 +9,8 @@
       }
     },
     {
-      "label": "H tags for labels (does not affect the size of the label)",
-      "description": "The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "label": "Thẻ H cho nhãn (không ảnh hưởng đến kích thước của nhãn)",
+      "description": "Thẻ h được sử dụng trên nhãn. Thông thường là H2 nhưng nếu nó thuộc tiêu đề H2 thì sử dụng H3. Không ảnh hưởng đến kích thước của nhãn, chỉ được sử dụng cho mục đích ngữ nghĩa.",
       "options": [
         {
           "label": "H2"
