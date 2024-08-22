@@ -1,20 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Paneller",
-      "entity": "panel",
-      "field": {
-        "label": "İçerik",
-        "entity": "içerik",
-        "fields": [
-          {
-            "label": "Başlık"
-          },
-          {
-            "label": "İçerik türü",
-            "entity": "içerik"
-          }
-        ]
+      "label":"Paneller",
+      "entity":"panel",
+      "field":{
+        "label":"İçerik",
+        "entity":"içerik"
       }
     },
     {

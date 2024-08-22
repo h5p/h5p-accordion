@@ -1,20 +1,11 @@
 {
   "semantics": [
     {
-      "label": "Panely",
-      "entity": "panel",
-      "field": {
-        "label": "Obsah",
-        "entity": "obsah",
-        "fields": [
-          {
-            "label": "Nadpis"
-          },
-          {
-            "label": "Typ obsahu",
-            "entity": "obsah"
-          }
-        ]
+      "label":"Panely",
+      "entity":"panel",
+      "field":{
+        "label":"Obsah",
+        "entity":"obsah"
       }
     },
     {
