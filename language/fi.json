@@ -1,36 +1,40 @@
 {
-  "semantics":[
+  "semantics": [
     {
-      "label":"Paneelit",
-      "entity":"paneeli",
-      "field":{
-        "label":"Sisältö",
-        "entity":"sisältö",
-        "fields":[
+      "label": "Paneelit",
+      "entity": "paneeli",
+      "field": {
+        "label": "Sisältö",
+        "entity": "sisältö",
+        "fields": [
           {
-            "label":"Otsikko"
+            "label": "Otsikko"
           },
           {
-            "label":"Sisältötyyppi",
-            "entity":"sisältö"
+            "label": "Sisältötyyppi",
+            "entity": "sisältö"
           }
         ]
       }
     },
     {
-      "label":"Otsikon H tagi (Ei vaikuta otsikon kokoon)",
-      "description":"H tagiä käytetään otsikoille. Tyypillisesti H2, mutta jos pitää olla alempitasoinen niin käytä H3. Ei vaikuta otsikon kokoon, käytetty vain kuvaavassa tarkoituksessa.",
-      "options":[
+      "label": "Otsikon H tagi (Ei vaikuta otsikon kokoon)",
+      "description": "H tagiä käytetään otsikoille. Tyypillisesti H2, mutta jos pitää olla alempitasoinen niin käytä H3. Ei vaikuta otsikon kokoon, käytetty vain kuvaavassa tarkoituksessa.",
+      "options": [
         {
-          "label":"H2"
+          "label": "H2"
         },
         {
-          "label":"H3"
+          "label": "H3"
         },
         {
-          "label":"H4"
+          "label": "H4"
         }
       ]
+    },
+    {
+      "label": "Sort panels by title",
+      "description": "If checked, the panels will be displayed in alphabetical order based on the panel title."
     }
   ]
 }

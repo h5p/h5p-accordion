@@ -31,6 +31,10 @@
           "label": "H4"
         }
       ]
+    },
+    {
+      "label": "Sort panels by title",
+      "description": "If checked, the panels will be displayed in alphabetical order based on the panel title."
     }
   ]
 }
