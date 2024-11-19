@@ -61,7 +61,7 @@ H5P.Accordion = (function ($) {
     }
 
     // Insert content
-    $container.html('').addClass('h5p-accordion').append(self.$content);
+    $container.html('').addClass('h5p-accordion h5p-theme').append(self.$content);
   };
 
   /**
