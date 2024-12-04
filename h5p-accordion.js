@@ -85,7 +85,7 @@ H5P.Accordion = (function ($) {
       // We're running in an iframe, so we must animate the iframe height
       self.animateResize();
     };
-
+    
     // Create panel title
     var $title =  $('<' + this.params.hTag + '/>', {
       'id': titleId,

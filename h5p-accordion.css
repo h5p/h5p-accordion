@@ -1,39 +1,52 @@
 .h5p-no-frame > .h5p-accordion {
   border: 1px solid #eee;
 }
+.h5p-accordion {
+  background-color: var(--h5p-theme-ui-base);
+  color: var(--h5p-theme-text-primary);
+}
 .h5p-accordion .h5p-panel-title {
-  margin: 0;
-  color: #111111;
+  margin: var(--h5p-theme-spacing-xs) 0;
+  color: var(--h5p-theme-text-primary);
   position: relative;
-  font-size: 1.25em;
+  font-size: var(--h5p-theme-font-size-xl);
   text-decoration: none;
   -webkit-transition: color 200ms ease 0s;
   -moz-transition: color 200ms ease 0s;
   transition: color 200ms ease 0s;
-  border-top: 1px solid #eeeeee;
-
   display: flex;
   justify-content: flex-start;
+ 
 }
 .h5p-accordion .h5p-panel-button {
   width: 100%;
   height: 100%;
   display: inline-flex;
-  padding: 0.8em 0.8em 0.8em 2.25em;
+  padding: var(--h5p-theme-spacing-s) var(--h5p-theme-spacing-s) var(--h5p-theme-spacing-s) var(--h5p-theme-spacing-xl);
 
   /* Disable default button styling */
-  background: none;
-  color: inherit;
+  background: var(--h5p-theme-alternative-light);
   border: none;
-  font: inherit;
   cursor: pointer;
   outline: none;
   text-align: left;
+  font-size: var(--h5p-theme-font-size-xl);
+  color: var(--h5p-theme-text-primary);
+  font-weight: 600;
+   border-radius: var(--h5p-theme-border-radius-medium);
 }
+.h5p-accordion .h5p-panel-button:hover {
+  background-color:  var(--h5p-theme-alternative-base);
+  transition: all 0.1s linear 0s;
+}
+.h5p-accordion .h5p-panel-button[aria-expanded="true"] {
+  background-color:  var(--h5p-theme-alternative-dark);
+}
+
 .h5p-accordion .h5p-panel-title:hover,
 .h5p-accordion .h5p-panel-title:focus-within,
 .h5p-accordion .h5p-panel-title:active {
-  color: #222266;
+  
 }
 .h5p-accordion .h5p-panel-title:first-of-type {
   border-top: 0;
@@ -45,13 +58,13 @@
   font-family: 'H5PFontAwesome4';
   content: "\f105";
   position: absolute;
-  left: 0.95em;
+  left: var(--h5p-theme-spacing-m);
   -webkit-transition: all 200ms ease 0s;
   -moz-transition: all 200ms ease 0s;
   transition: all 200ms ease 0s;
 }
 .h5p-accordion .h5p-panel-expanded {
-  color: #000000;
+  color: var(--h5p-theme-text-primary);
 }
 .h5p-accordion .h5p-panel-expanded .h5p-panel-button:before {
   -webkit-transform: rotate(90deg);
@@ -59,8 +72,9 @@
 }
 .h5p-accordion .h5p-panel-content {
   display: none;
-  padding: 0 1em;
+  padding: var(--h5p-theme-spacing-s);
   word-break: break-word;
+  font-size: var(--h5p-theme-font-size-m);
 }
 .h5p-accordion .h5p-panel-content p {
   margin-top: 0;
