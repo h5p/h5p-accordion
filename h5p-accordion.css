@@ -68,6 +68,7 @@
 }
 .h5p-accordion .h5p-panel-button:hover:before {
   background-color: color-mix(in srgb, var(--h5p-theme-main-cta-base), transparent 80%);
+  transition: all 0.1s linear 0s;
 }
 .h5p-accordion .h5p-panel-expanded .h5p-panel-button{
   border-bottom: none !important;
