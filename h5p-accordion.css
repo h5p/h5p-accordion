@@ -42,6 +42,9 @@
   background-color: var(--h5p-theme-ui-base);
   color: var(--h5p-theme-main-cta-base);
 }
+.h5p-accordion .h5p-panel-button[aria-expanded="true"]:hover{
+  background: var(--h5p-theme-alternative-light);
+}
 .h5p-accordion .h5p-panel-title:hover, .h5p-accordion .h5p-panel-title:focus-within, .h5p-accordion .h5p-panel-title:active {}
 .h5p-accordion .h5p-panel-title:first-of-type {
   border-top: 0;
