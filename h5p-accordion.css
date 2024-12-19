@@ -59,7 +59,6 @@
 }
 
 .h5p-accordion .h5p-panel-focused {
-  z-index: 3000;
   outline: 4px ridge var(--h5p-theme-main-cta-base);
   border-radius: 4px;
 }
