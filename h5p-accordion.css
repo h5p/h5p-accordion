@@ -58,9 +58,10 @@
   border-top: 0;
 }
 
-.h5p-accordion .h5p-panel-focused {
-  outline: 4px ridge var(--h5p-theme-main-cta-base);
+.h5p-accordion .h5p-panel-title:has(.h5p-panel-button:focus-visible) {
+  outline: 2px ridge var(--h5p-theme-main-cta-base);
   border-radius: 4px;
+  z-index: 1;
 }
 
 .h5p-accordion .h5p-panel-button:before {
