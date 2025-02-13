@@ -58,9 +58,9 @@
   border-top: 0;
 }
 
-.h5p-accordion .h5p-panel-title:has(.h5p-panel-button:focus-visible) {
+.h5p-accordion .h5p-panel-title .h5p-panel-button:focus-visible {
   outline: 2px ridge var(--h5p-theme-main-cta-base);
-  border-radius: 4px;
+  outline-offset: -2px;
   z-index: 1;
 }
 
