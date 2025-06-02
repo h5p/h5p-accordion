@@ -1,25 +1,25 @@
 {
   "semantics":[
     {
-      "label":"Panels",
+      "label":"Panelek",
       "entity":"panel",
       "field":{
-        "label":"Content",
-        "entity":"content",
+        "label":"Tartalom",
+        "entity":"tartalom",
         "fields":[
           {
-            "label":"Title"
+            "label":"Cím"
           },
           {
-            "label":"Content type",
-            "entity":"content"
+            "label":"Tartalom típus",
+            "entity":"tartalom"
           }
         ]
       }
     },
     {
-      "label":"H tags for labels (does not affect the size of the label)",
-      "description":"The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "label":"Címkék H tag-jei (nem befolyásolja a címke méretét)",
+      "description":"A címkéknél használt H tag. Általában H2, de ha egy H2 címsor alá kerül, akkor H3-at érdemes használni. Nem befolyásolja a címkék méretét, kizárólag szemantikai célokat szolgál.",
       "options":[
         {
           "label":"H2"
