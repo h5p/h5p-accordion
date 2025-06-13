@@ -61,7 +61,7 @@ H5P.Accordion = (function ($) {
     }
 
     // Insert content
-    $container.html('').addClass('h5p-accordion').append(self.$content);
+    $container.html('').addClass('h5p-accordion h5p-theme').append(self.$content);
   };
 
   /**
@@ -85,7 +85,7 @@ H5P.Accordion = (function ($) {
       // We're running in an iframe, so we must animate the iframe height
       self.animateResize();
     };
-
+    
     // Create panel title
     var $title =  $('<' + this.params.hTag + '/>', {
       'id': titleId,
@@ -129,16 +129,6 @@ H5P.Accordion = (function ($) {
             }
           }
         },
-        // The class needs to be set programmatically as the title 
-        // is not able to detect focus-visible on the button
-        'focus': function () {
-          if($titleButton.is(':focus-visible')) {
-            $title.addClass('h5p-panel-focused');
-          }
-        },
-        'blur': function () {
-          $title.removeClass('h5p-panel-focused');
-        }
       }
     });
 
