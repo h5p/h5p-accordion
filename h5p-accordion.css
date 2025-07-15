@@ -47,7 +47,7 @@
 
 .h5p-accordion .h5p-panel-button[aria-expanded="true"] {
   background-color: var(--h5p-theme-ui-base);
-  color: var(--h5p-theme-main-cta-base);
+  color: var(--h5p-theme-contrast-cta-white);
 }
 
 .h5p-accordion .h5p-panel-button[aria-expanded="true"]:hover{
@@ -90,9 +90,9 @@
 .h5p-accordion .h5p-panel-expanded .h5p-panel-button:before {
   /*-webkit-transform: rotate(90deg);
   transform: rotate(90deg);*/
-  background-color: color-mix(in srgb, var(--h5p-theme-main-cta-base), transparent 80%);
+  background-color: color-mix(in srgb, var(--h5p-theme-contrast-cta-white), transparent 80%);
   content: "\e91a";
-  color: var(--h5p-theme-main-cta-base);
+  color: var(--h5p-theme-contrast-cta-white);
 }
 
 .h5p-accordion .h5p-panel-content {
