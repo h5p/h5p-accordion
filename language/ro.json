@@ -1,25 +1,25 @@
 {
   "semantics":[
     {
-      "label":"Panels",
-      "entity":"panel",
+      "label":"Panou",
+      "entity":"panou",
       "field":{
-        "label":"Content",
-        "entity":"content",
+        "label":"Conținut",
+        "entity":"conținut",
         "fields":[
           {
-            "label":"Title"
+            "label":"Titlu"
           },
           {
-            "label":"Content type",
-            "entity":"content"
+            "label":"Tip conținut",
+            "entity":"conținut"
           }
         ]
       }
     },
     {
-      "label":"H tags for labels (does not affect the size of the label)",
-      "description":"The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "label":"Marchează H pentru etichete (nu afectează dimensiunea etichetei)",
+      "description":"Marcarea h folosită pentru etichete (labels). În mod normal este H2, dar dacă aceasta se află sub un titlu H2, se folosește H3. Nu afectează dimensiunea etichetelor, este utilizat doar în scopuri semantice.",
       "options":[
         {
           "label":"H2"
