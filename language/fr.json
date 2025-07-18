@@ -1,20 +1,16 @@
 {
   "semantics": [
     {
-      "label": "Panneaux",
-      "entity": "panneau",
-      "field": {
-        "label": "Contenu",
-        "entity": "contenu",
-        "fields": [
-          {
-            "label": "Titre"
-          },
-          {
-            "label": "Type de contenu",
-            "entity": "contenu"
-          }
-        ]
+      "label":"Titre de section",
+      "entity":"panneau",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "field":{
+        "label":"Contenu",
+        "entity":"content"
       }
     },
     {

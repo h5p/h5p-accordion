@@ -3,18 +3,14 @@
     {
       "label":"Панели",
       "entity":"panel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field":{
         "label":"Садржај",
-        "entity":"content",
-        "fields":[
-          {
-            "label":"Наслов"
-          },
-          {
-            "label":"Тип садржаја",
-            "entity":"content"
-          }
-        ]
+        "entity":"content"
       }
     },
     {

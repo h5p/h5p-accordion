@@ -3,18 +3,14 @@
     {
       "label": "פאנלים",
       "entity": "פאנל",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "תוכן",
-        "entity": "תוכן",
-        "fields": [
-          {
-            "label": "כותרת"
-          },
-          {
-            "label": "סוג תוכן",
-            "entity": "תוכן"
-          }
-        ]
+        "entity": "תוכן"
       }
     },
     {

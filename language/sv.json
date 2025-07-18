@@ -1,20 +1,16 @@
 {
   "semantics": [
     {
-      "label": "Paneler",
-      "entity": "panel",
-      "field": {
-        "label": "Innehåll",
-        "entity": "innehåll",
-        "fields": [
-          {
-            "label": "Titel"
-          },
-          {
-            "label": "Innehållstyp",
-            "entity": "innehåll"
-          }
-        ]
+      "label":"Paneler",
+      "entity":"panel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "field":{
+        "label":"Innehåll",
+        "entity":"innehåll"
       }
     },
     {

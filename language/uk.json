@@ -3,18 +3,14 @@
     {
       "label":"Панелі",
       "entity":"панель",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field":{
         "label":"Вміст",
-        "entity":"вміст",
-        "fields":[
-          {
-            "label":"Назва"
-          },
-          {
-            "label":"Тип матеріалу",
-            "entity":"Тип матеріалу"
-          }
-        ]
+        "entity":"вміст"
       }
     },
     {

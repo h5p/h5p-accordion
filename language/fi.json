@@ -3,18 +3,14 @@
     {
       "label":"Paneelit",
       "entity":"paneeli",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field":{
         "label":"Sisältö",
-        "entity":"sisältö",
-        "fields":[
-          {
-            "label":"Otsikko"
-          },
-          {
-            "label":"Sisältötyyppi",
-            "entity":"sisältö"
-          }
-        ]
+        "entity":"sisältö"
       }
     },
     {

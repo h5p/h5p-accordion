@@ -3,18 +3,14 @@
     {
       "label": "لوحات",
       "entity": "لوحه",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "المحتوي",
-        "entity": "المحتوي",
-        "fields": [
-          {
-            "label": "عنوان فصل"
-          },
-          {
-            "label": "نوع المحتوى",
-            "entity": "المحتوى"
-          }
-        ]
+        "entity": "المحتوي"
       }
     },
     {

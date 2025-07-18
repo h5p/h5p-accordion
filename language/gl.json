@@ -3,18 +3,14 @@
     {
       "label": "Paneis",
       "entity": "panel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Contido",
-        "entity": "contido",
-        "fields": [
-          {
-            "label": "Título"
-          },
-          {
-            "label": "Tipo de contido",
-            "entity": "contido"
-          }
-        ]
+        "entity": "contido"
       }
     },
     {

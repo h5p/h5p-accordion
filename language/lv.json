@@ -3,18 +3,14 @@
     {
       "label": "Paneļi",
       "entity": "panelis",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Saturs",
-        "entity": "saturs",
-        "fields": [
-          {
-            "label": "Nosaukums"
-          },
-          {
-            "label": "Satura veids",
-            "entity": "saturs"
-          }
-        ]
+        "entity": "saturs"
       }
     },
     {

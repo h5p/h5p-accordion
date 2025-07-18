@@ -3,18 +3,14 @@
     {
       "label": "Панели",
       "entity": "panel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Съдържание",
-        "entity": "content",
-        "fields": [
-          {
-            "label": "Заглавие"
-          },
-          {
-            "label": "Тип съдържание",
-            "entity": "content"
-          }
-        ]
+        "entity": "content"
       }
     },
     {

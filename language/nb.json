@@ -3,18 +3,14 @@
     {
       "label": "Paneler",
       "entity": "panel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Innhold",
-        "entity": "innhold",
-        "fields": [
-          {
-            "label": "Tittel"
-          },
-          {
-            "label": "Innholdstype",
-            "entity": "innhold"
-          }
-        ]
+        "entity": "innhold"
       }
     },
     {

@@ -3,18 +3,14 @@
     {
       "label": "پنل‌ها",
       "entity": "پنل",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "محتوا",
-        "entity": "محتوا",
-        "fields": [
-          {
-            "label": "عنوان"
-          },
-          {
-            "label": "نوع محتوا",
-            "entity": "محتوا"
-          }
-        ]
+        "entity": "محتوا"
       }
     },
     {

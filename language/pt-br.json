@@ -3,18 +3,14 @@
     {
       "label": "Painéis",
       "entity": "Painel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Conteúdo",
-        "entity": "conteúdo",
-        "fields": [
-          {
-            "label": "Título"
-          },
-          {
-            "label": "Tipo de conteúdo",
-            "entity": "conteúdo"
-          }
-        ]
+        "entity": "conteúdo"
       }
     },
     {

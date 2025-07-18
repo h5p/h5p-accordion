@@ -3,18 +3,14 @@
     {
       "label": "Самбар",
       "entity": "самбар",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Контент",
-        "entity": "контент",
-        "fields": [
-          {
-            "label": "Гарчиг"
-          },
-          {
-            "label": "Контентийн төрөл",
-            "entity": "контент"
-          }
-        ]
+        "entity": "контент"
       }
     },
     {

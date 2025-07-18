@@ -3,18 +3,14 @@
     {
       "label": "所有區塊",
       "entity": "panel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "區塊",
-        "entity": "content",
-        "fields": [
-          {
-            "label": "標題"
-          },
-          {
-            "label": "內容",
-            "entity": "content"
-          }
-        ]
+        "entity": "content"
       }
     },
     {

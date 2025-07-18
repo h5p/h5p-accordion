@@ -3,18 +3,14 @@
     {
       "label": "Skydeliai",
       "entity": "skydelis",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Turinys",
-        "entity": "turinys",
-        "fields": [
-          {
-            "label": "Pavadinimas"
-          },
-          {
-            "label": "Turinio tipas",
-            "entity": "turinys"
-          }
-        ]
+        "entity": "turinys"
       }
     },
     {

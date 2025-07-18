@@ -32,10 +32,16 @@ H5P.Accordion = (function ($) {
     this.instances = [];
 
     for (var i = 0; i < this.params.panels.length; i++) {
-      this.instances[i] = H5P.newRunnable(this.params.panels[i].content, contentId);
+      this.instances[i] = H5P.newRunnable(this.params.panels[i], contentId);
+
+      // Bubble resize events
+      this.bubbleUp(this.instances[i], 'resize', this);
     }
 
     this.idPrefix = (nextIdPrefix++) + '-';
+
+    // Resize children to fit inside parent
+    this.bubbleDown(this, 'resize', this.instances);
   }
 
   Accordion.prototype = Object.create(H5P.EventDispatcher.prototype);
@@ -85,7 +91,13 @@ H5P.Accordion = (function ($) {
       // We're running in an iframe, so we must animate the iframe height
       self.animateResize();
     };
-    
+
+    // Retrieve title from Column metadata
+    const title = (
+      self.params.panels[id].metadata &&
+      self.params.panels[id].metadata.title
+    ) ? self.params.panels[id].metadata.title : 'Unknown: Panel';
+
     // Create panel title
     var $title =  $('<' + this.params.hTag + '/>', {
       'id': titleId,
@@ -98,7 +110,7 @@ H5P.Accordion = (function ($) {
       'tabindex': '0',
       'aria-expanded': 'false',
       'aria-controls': contentId,
-      'html': self.params.panels[id].title,
+      'html': title,
       'on': {
         'click': toggleCollapse,
         'keydown': function (event) {
@@ -277,6 +289,47 @@ H5P.Accordion = (function ($) {
   Accordion.prototype.allowedToWork = function (myId) {
     return allowedLoopers.indexOf(myId) !== -1;
   };
+
+  /**
+   * Bubble events from parent to children.
+   *
+   * @private
+   * @param {object} origin Origin of Event.
+   * @param {string} eventName Name of Event.
+   * @param {object[]} targets Targets to trigger event on.
+   */
+  Accordion.prototype.bubbleDown = function (origin, eventName, targets) {
+    origin.on(eventName, function (event) {
+      if (origin.bubblingUpwards) {
+        return; // Prevent send event back down.
+      }
+
+      for (var i = 0; i < targets.length; i++) {
+        targets[i].trigger(eventName, event);
+      }
+    });
+  }
+
+  /**
+   * Bubble events from child to parent.
+   *
+   * @private
+   * @param {object} origin Origin of Event.
+   * @param {string} eventName Name of Event.
+   * @param {object} target Target to trigger event on.
+   */
+  Accordion.prototype.bubbleUp = function (origin, eventName, target) {
+    origin.on(eventName, function (event) {
+      // Prevent target from sending event back down
+      target.bubblingUpwards = true;
+
+      // Trigger event
+      target.trigger(eventName, event);
+
+      // Reset
+      target.bubblingUpwards = false;
+    });
+  }
 
   return Accordion;
 })(H5P.jQuery);

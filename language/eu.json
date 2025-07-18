@@ -3,18 +3,14 @@
     {
       "label": "Panelak",
       "entity": "panela",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Edukia",
-        "entity": "edukia",
-        "fields": [
-          {
-            "label": "Izenburua"
-          },
-          {
-            "label": "Eduki mota",
-            "entity": "edukia"
-          }
-        ]
+        "entity": "edukia"
       }
     },
     {

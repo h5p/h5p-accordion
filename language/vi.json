@@ -1,20 +1,16 @@
 {
   "semantics": [
     {
-      "label": "Bảng điều khiển",
-      "entity": "panel",
-      "field": {
-        "label": "Nội dung",
-        "entity": "nội dung",
-        "fields": [
-          {
-            "label": "Tiêu đề"
-          },
-          {
-            "label": "Dạng nội dung",
-            "entity": "nội dung"
-          }
-        ]
+      "label":"Bảng điều khiển",
+      "entity":"panel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
+      "field":{
+        "label":"Dạng nội dung",
+        "entity":"nội dung"
       }
     },
     {

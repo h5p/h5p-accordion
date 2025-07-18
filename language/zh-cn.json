@@ -3,18 +3,14 @@
     {
       "label": "面板",
       "entity": "面板",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "内容",
-        "entity": "内容",
-        "fields": [
-          {
-            "label": "标题"
-          },
-          {
-            "label": "内容类型",
-            "entity": "内容"
-          }
-        ]
+        "entity": "内容"
       }
     },
     {
