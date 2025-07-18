@@ -3,6 +3,11 @@
     {
       "label": "面板",
       "entity": "面板",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "内容",
         "entity": "内容"

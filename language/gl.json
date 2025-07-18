@@ -3,6 +3,11 @@
     {
       "label": "Paneis",
       "entity": "panel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Contido",
         "entity": "contido"

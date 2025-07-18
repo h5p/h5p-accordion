@@ -3,6 +3,11 @@
     {
       "label":"Bảng điều khiển",
       "entity":"panel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field":{
         "label":"Dạng nội dung",
         "entity":"nội dung"

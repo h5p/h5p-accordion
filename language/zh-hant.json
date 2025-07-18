@@ -3,6 +3,11 @@
     {
       "label": "所有區塊",
       "entity": "panel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "區塊",
         "entity": "content"

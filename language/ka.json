@@ -3,6 +3,11 @@
     {
       "label": "პანელი",
       "entity": "პანელი",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "შიგთავსი",
         "entity": "შიგთავსი"

@@ -3,6 +3,11 @@
     {
       "label": "پنل‌ها",
       "entity": "پنل",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "محتوا",
         "entity": "محتوا"

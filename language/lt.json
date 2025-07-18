@@ -3,6 +3,11 @@
     {
       "label": "Skydeliai",
       "entity": "skydelis",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Turinys",
         "entity": "turinys"

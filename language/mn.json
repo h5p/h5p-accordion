@@ -3,6 +3,11 @@
     {
       "label": "Самбар",
       "entity": "самбар",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Контент",
         "entity": "контент"

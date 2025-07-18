@@ -3,6 +3,11 @@
     {
       "label": "لوحات",
       "entity": "لوحه",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "المحتوي",
         "entity": "المحتوي"

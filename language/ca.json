@@ -3,6 +3,11 @@
     {
       "label": "Taulers",
       "entity": "tauler",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field":{
         "label":"Contingut",
         "entity":"contingut"

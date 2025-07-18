@@ -3,6 +3,11 @@
     {
       "label": "所有区块",
       "entity": "区块",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "区块",
         "entity": "内容"

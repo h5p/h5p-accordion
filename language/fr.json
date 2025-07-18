@@ -3,6 +3,11 @@
     {
       "label":"Titre de section",
       "entity":"panneau",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field":{
         "label":"Contenu",
         "entity":"content"

@@ -3,6 +3,11 @@
     {
       "label":"Panelen",
       "entity":"paneel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field":{
         "label":"Inhoud",
         "entity":"inhoud"

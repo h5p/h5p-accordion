@@ -3,6 +3,11 @@
     {
       "label": "פאנלים",
       "entity": "פאנל",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "תוכן",
         "entity": "תוכן"

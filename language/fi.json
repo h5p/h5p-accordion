@@ -3,6 +3,11 @@
     {
       "label":"Paneelit",
       "entity":"paneeli",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field":{
         "label":"Sisältö",
         "entity":"sisältö"

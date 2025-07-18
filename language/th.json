@@ -3,6 +3,11 @@
     {
       "label": "แผงข้อมูล",
       "entity": "แผงข้อมูล",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "เนื้อหา",
         "entity": "เนื้อหา"

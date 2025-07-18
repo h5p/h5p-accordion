@@ -3,18 +3,14 @@
     {
       "label": "Paneli",
       "entity": "paneli",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Maudhui",
-        "entity": "maudhui",
-        "fields": [
-          {
-            "label": "Mada"
-          },
-          {
-            "label": "Aina ya maudhui",
-            "entity": "maudhui"
-          }
-        ]
+        "entity": "maudhui"
       }
     },
     {

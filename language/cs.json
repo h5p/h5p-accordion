@@ -3,6 +3,11 @@
     {
       "label":"Panely",
       "entity":"panel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field":{
         "label":"Obsah",
         "entity":"obsah"

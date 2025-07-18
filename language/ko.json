@@ -3,6 +3,11 @@
     {
       "label":"패널",
       "entity":"패널",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field":{
         "label":"콘텐츠",
         "entity":"콘텐츠"

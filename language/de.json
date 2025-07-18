@@ -3,6 +3,11 @@
     {
       "label": "Abschnitte",
       "entity": "Abschnitt",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Inhalt",
         "entity": "Inhalt"

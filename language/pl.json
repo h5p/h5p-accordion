@@ -3,6 +3,11 @@
     {
       "label":"Panele",
       "entity":"panel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field":{
         "label":"Zawartość",
         "entity":"zawartość"

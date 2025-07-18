@@ -3,6 +3,11 @@
     {
       "label": "Pannelli",
       "entity": "pannello",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Contenuto",
         "entity": "contenuto"

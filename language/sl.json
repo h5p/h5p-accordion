@@ -3,6 +3,11 @@
     {
       "label": "Panoji",
       "entity": "panel",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Vsebina",
         "entity": "content"

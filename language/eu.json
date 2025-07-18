@@ -3,6 +3,11 @@
     {
       "label": "Panelak",
       "entity": "panela",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Edukia",
         "entity": "edukia"

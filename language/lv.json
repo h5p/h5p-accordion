@@ -3,6 +3,11 @@
     {
       "label": "Paneļi",
       "entity": "panelis",
+      "widgets": [
+        {
+          "label": "Default"
+        }
+      ],
       "field": {
         "label": "Saturs",
         "entity": "saturs"
