@@ -1,18 +1,18 @@
 {
   "semantics": [
     {
-      "label": "Panoji",
-      "entity": "panel",
+      "label": "Razdelki",
+      "entity": "razdelek",
       "field": {
         "label": "Vsebina",
-        "entity": "content",
+        "entity": "vsebina",
         "fields": [
           {
             "label": "Naslov"
           },
           {
             "label": "Tip vsebine",
-            "entity": "content"
+            "entity": "vsebina"
           }
         ]
       }
