@@ -6,7 +6,6 @@
 
 
 H5P.Accordion = (function ($) {
-  console.log('using local');
   var nextIdPrefix = 0;
   var nextLooperId = 0;
   var allowedLoopers = [];

@@ -10,21 +10,19 @@ class AccordionTitle extends HTMLElement {
 
     this.panelButton = document.createElement('button');
 
-    console.log('this.text: ', this.text);
     this.panelButton.textContent = this.getAttribute('text') || 'got no title';
     this.panelButton.classList.add('h5p-panel-button');
     
     this.appendChild(this.panelButton);
 
     this.panelButton.addEventListener('click', () => {
-      console.log('clicked');
       const event = new CustomEvent('accordion-click', {
         bubbles: true,
         detail: {
           expanded: !this.expanded
         }
       });
-      console.log('event: ', this.expanded);
+
       this.dispatchEvent(event);
     });
   }
@@ -33,7 +31,10 @@ class AccordionTitle extends HTMLElement {
     if (name === 'text' && this.panelButton) {
       this.panelButton.textContent = newValue;
     }
-    
+    else if (name === 'expanded') {
+      this.classList.toggle('h5p-panel-expanded', this.expanded);
+      this.setAttribute('aria-expanded', this.expanded);
+    }
   }
 }
 
@@ -51,7 +52,6 @@ class AccordionContent extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    console.log('oldValue, newValue: ', oldValue, newValue);
     if (name === 'text') {
       this.innerHTML = newValue;
     }
@@ -84,19 +84,15 @@ class AccordionComponent extends HTMLElement {
     this.titleElement.setAttribute('expanded', this.getAttribute('expanded'));
     this.contentElement.setAttribute('expanded', this.getAttribute('expanded'));
 
-    
     this.appendChild(this.titleElement);
     this.appendChild(this.contentElement);
 
-
     this.addEventListener('accordion-click', (event) => {
-      console.log('accordion-click: ', event.detail);
       this.setAttribute('expanded', event.detail.expanded);
     })
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    console.log(`${name}: , ${oldValue}, ${newValue}`);
     if (name === 'header' && this.titleElement) {
       this.titleElement.setAttribute('text', newValue);
     }
