@@ -6,6 +6,9 @@
   background-color: var(--h5p-theme-ui-base);
   color: var(--h5p-theme-text-secondary);
 }
+.h5p-accordion .hidden {
+  display: none;
+}
 
 .h5p-accordion .h5p-panel-title {
   margin: 0;
@@ -96,7 +99,6 @@
 }
 
 .h5p-accordion .h5p-panel-content {
-  display: none;
   padding: var(--h5p-theme-spacing-xxs) var(--h5p-theme-spacing-s);
   word-break: break-word;
   font-size: var(--h5p-theme-font-size-m);

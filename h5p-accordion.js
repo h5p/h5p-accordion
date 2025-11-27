@@ -3,8 +3,10 @@
  *
  * @param {jQuery} $
  */
-H5P.Accordion = (function ($) {
 
+
+H5P.Accordion = (function ($) {
+  console.log('using local');
   var nextIdPrefix = 0;
   var nextLooperId = 0;
   var allowedLoopers = [];
@@ -61,7 +63,8 @@ H5P.Accordion = (function ($) {
     }
 
     // Insert content
-    $container.html('').addClass('h5p-accordion h5p-theme').append(self.$content);
+    // $container.html('').addClass('h5p-accordion h5p-theme').append(self.$content);
+    $container.html('<h5p-accordion header="This is a title" panelbody="This is a slightly longer text"/>');
   };
 
   /**
