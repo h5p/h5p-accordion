@@ -4,6 +4,7 @@
  * @param {jQuery} $
  */
 
+import * as something from './h5p-accordion-test.js';
 
 H5P.Accordion = (function ($) {
   var nextIdPrefix = 0;

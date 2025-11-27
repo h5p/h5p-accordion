@@ -17,10 +17,7 @@
   "license": "MIT",
   "preloadedJs": [
     {
-      "path": "h5p-accordion-test.js"
-    },
-    {
-      "path": "h5p-accordion.js"
+      "path": "dist/h5p-accordion.js"
     }
   ],
   "preloadedDependencies": [
