@@ -12,7 +12,7 @@
   "author": "Joubel",
   "coreApi": {
     "majorVersion": 1,
-    "minorVersion": 5
+    "minorVersion": 28
   },
   "license": "MIT",
   "preloadedJs": [
