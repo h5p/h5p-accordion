@@ -1,0 +1,36 @@
+{
+  "semantics": [
+    {
+      "label": "Panel",
+      "entity": "panel",
+      "field": {
+        "label": "Konten",
+        "entity": "konten",
+        "fields": [
+          {
+            "label": "Judul"
+          },
+          {
+            "label": "Jenis konten",
+            "entity": "konten"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tag H untuk label (tidak memengaruhi ukuran label)",
+      "description": "Tag H yang digunakan pada label. Biasanya H2 tetapi jika ini berada di bawah judul H2 gunakan H3. Tidak memengaruhi ukuran label, hanya digunakan untuk tujuan semantik.",
+      "options": [
+        {
+          "label": "H2"
+        },
+        {
+          "label": "H3"
+        },
+        {
+          "label": "H4"
+        }
+      ]
+    }
+  ]
+}
