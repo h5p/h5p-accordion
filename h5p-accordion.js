@@ -70,7 +70,7 @@ H5P.Accordion = (function ($) {
     }
 
     // Insert content
-    $container.html('').addClass('h5p-accordion').append(self.$content);
+    $container.html('').addClass('h5p-accordion h5p-theme').append(self.$content);
   };
 
   /**
@@ -94,7 +94,7 @@ H5P.Accordion = (function ($) {
       // We're running in an iframe, so we must animate the iframe height
       self.animateResize();
     };
-
+    
     // Create panel title
     var $title =  $('<' + this.params.hTag + '/>', {
       'id': titleId,

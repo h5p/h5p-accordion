@@ -2,7 +2,7 @@
   "title": "Accordion",
   "majorVersion": 1,
   "minorVersion": 0,
-  "patchVersion": 34,
+  "patchVersion": 47,
   "embedTypes": [
     "iframe"
   ],
@@ -12,7 +12,7 @@
   "author": "Joubel",
   "coreApi": {
     "majorVersion": 1,
-    "minorVersion": 5
+    "minorVersion": 28
   },
   "license": "MIT",
   "preloadedJs": [

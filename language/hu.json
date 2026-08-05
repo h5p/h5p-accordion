@@ -1,18 +1,18 @@
 {
   "semantics": [
     {
-      "label": "Panels",
+      "label":"Panelek",
       "entity": "panel",
       "field": {
-        "label": "Content",
-        "entity": "content",
+        "label":"Tartalom",
+        "entity":"tartalom",
         "fields": [
           {
-            "label": "Title"
+            "label":"Cím"
           },
           {
-            "label": "Content type",
-            "entity": "content"
+            "label":"Tartalom típus",
+            "entity":"tartalom"
           }
         ]
       }
