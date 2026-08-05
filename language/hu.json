@@ -1,12 +1,12 @@
 {
-  "semantics":[
+  "semantics": [
     {
       "label":"Panelek",
-      "entity":"panel",
-      "field":{
+      "entity": "panel",
+      "field": {
         "label":"Tartalom",
         "entity":"tartalom",
-        "fields":[
+        "fields": [
           {
             "label":"Cím"
           },
@@ -18,19 +18,23 @@
       }
     },
     {
-      "label":"Címkék H tag-jei (nem befolyásolja a címke méretét)",
-      "description":"A címkéknél használt H tag. Általában H2, de ha egy H2 címsor alá kerül, akkor H3-at érdemes használni. Nem befolyásolja a címkék méretét, kizárólag szemantikai célokat szolgál.",
-      "options":[
+      "label": "H tags for labels (does not affect the size of the label)",
+      "description": "The h tag used on the labels. Normally H2 but if this belongs under an H2 heading use H3. Does not affect the size of the labels, only used for semantical purposes.",
+      "options": [
         {
-          "label":"H2"
+          "label": "H2"
         },
         {
-          "label":"H3"
+          "label": "H3"
         },
         {
-          "label":"H4"
+          "label": "H4"
         }
       ]
+    },
+    {
+      "label": "Sort panels by title",
+      "description": "If checked, the panels will be displayed in alphabetical order based on the panel title."
     }
   ]
 }
